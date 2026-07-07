@@ -1,0 +1,30 @@
+# License
+
+This repository contains educational materials and example source code for the course **AI 활용 코딩**.
+
+## Educational Materials
+
+Markdown textbooks, slides, assignments, quizzes, and instructor notes are provided for educational use.
+
+You may:
+
+- use the materials for teaching and learning,
+- modify the materials for your own class,
+- redistribute modified versions with attribution.
+
+Please provide attribution when reusing or modifying the materials.
+
+Recommended attribution:
+
+```text
+Based on "AI 활용 코딩: 비전공자를 위한 생성형 AI 활용 프로그래밍"
+```
+
+## Source Code
+
+Example Python code in notebooks and Markdown files may be used, modified, and redistributed for educational purposes.
+
+## AI-Generated Content Notice
+
+Some materials may be developed with the assistance of generative AI tools.  
+Users should review, verify, and adapt the materials before classroom use.
