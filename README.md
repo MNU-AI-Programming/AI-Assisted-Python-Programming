@@ -1,5 +1,5 @@
 # AI 활용 코딩
-### 비전공자를 위한 생성형 AI 활용 프로그래밍
+### 생성형 AI 활용 프로그래밍
 
 > ChatGPT와 함께 배우는 Python Programming  
 > 모든 실습은 **Google Colab**에서 진행합니다.
@@ -8,6 +8,10 @@
 ![Google%20Colab](https://img.shields.io/badge/Google-Colab-orange)
 ![ChatGPT](https://img.shields.io/badge/AI-ChatGPT-green)
 ![License](https://img.shields.io/badge/License-Education-yellow)
+
+---
+# 대상
+### 국립목포대학교 AI부트캠프 초급과정을 이수하는 학생
 
 ---
 
@@ -165,6 +169,12 @@ AI를 사용할 때는 다음을 지켜야 합니다.
 
 > 코딩을 잘한다는 것은 모든 문법을 외우는 것이 아니라,  
 > 문제를 이해하고 AI와 협력하여 해결 방법을 만들어 내는 능력입니다.
+
+---
+
+## 강의자
+### 컴퓨터학부 이영호 교수
+
 
 ---
 
