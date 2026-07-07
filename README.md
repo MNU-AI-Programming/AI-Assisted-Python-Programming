@@ -1,5 +1,5 @@
 # AI 활용 코딩
-### 비전공자를 위한 생성형 AI 활용 프로그래밍
+### 생성형 AI 활용 프로그래밍
 
 > ChatGPT와 함께 배우는 Python Programming  
 > 모든 실습은 **Google Colab**에서 진행합니다.
@@ -9,6 +9,9 @@
 ![ChatGPT](https://img.shields.io/badge/AI-ChatGPT-green)
 ![License](https://img.shields.io/badge/License-Education-yellow)
 
+---
+# 대상
+### 이 자료는 국립목포대학교 AI부트캠프 초급과정을 이수하고자 하는 학생을 대상으로 만들었습니다. 
 ---
 
 ## 📖 교재 소개
@@ -227,13 +230,9 @@ AI를 사용할 때는 다음을 지켜야 합니다.
 
 ---
 
-## 👨‍🏫 교수자 안내
+## 👨‍🏫 교수 안내
 
-이 저장소를 수업에 사용하려면 다음을 먼저 수정하세요.
+### 컴퓨터학부 이영호 교수
+### youngho@ce.mokpo.ac.kr
 
-1. `USERNAME`을 교수자 GitHub 계정명으로 변경
-2. `syllabus.md`의 평가 비율과 제출 방식 확인
-3. LMS 또는 GitHub Classroom 제출 방식 결정
-4. Chapter별 `assignment.md` 마감일 추가
-5. 공개 범위와 AI 사용 원칙을 학생에게 안내
 
