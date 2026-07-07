@@ -8,6 +8,21 @@
 ## 시작하기
 
 - [교재 소개](README.md)
+- [강의계획서](syllabus.md)
+
+---
+
+## Google Colab 바로 열기
+
+- [Chapter 1 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb)
+- [Chapter 2 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter02/practice.ipynb)
+- [Chapter 3 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb)
+- [Chapter 4 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter04/practice.ipynb)
+- [Chapter 5 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter05/practice.ipynb)
+- [Chapter 6 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter06/practice.ipynb)
+- [Chapter 7 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter07/practice.ipynb)
+- [Chapter 8 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb)
+
 
 ---
 
@@ -183,9 +198,20 @@
 
 ## 부록
 
-- Google Colab 사용법
-- GitHub 사용법
-- Markdown 기초
-- AI Prompt 모음
-- 자주 발생하는 오류
-- 과제 제출 방법
+- [Google Colab 사용법](appendix/colab.md)
+- [GitHub 사용법](appendix/github.md)
+- [Markdown 기초](appendix/markdown.md)
+- [자주 묻는 질문](appendix/faq.md)
+- [AI Prompt 모음](prompts/README.md)
+- [코드 생성 Prompt](prompts/coding.md)
+- [디버깅 Prompt](prompts/debugging.md)
+- [리팩토링 Prompt](prompts/refactoring.md)
+- [보고서 작성 Prompt](prompts/report.md)
+
+
+## 교수자 자료
+
+- [강의계획서](syllabus.md)
+- [최종 프로젝트 평가 루브릭](instructor/project-rubric.md)
+- [저장소 기여 안내](CONTRIBUTING.md)
+- [라이선스](LICENSE)

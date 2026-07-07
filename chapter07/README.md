@@ -1,7 +1,22 @@
 # Chapter 7. 리스트와 파일 처리
 
+[![Open Chapter 7 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter07/practice.ipynb)
+
 > 지금까지는 하나의 값이나 몇 개의 변수만 다루었습니다.  
 > 이번 장에서는 여러 개의 데이터를 한 번에 저장하는 **리스트(list)**와 데이터를 파일로 저장하고 다시 읽는 기초 방법을 배웁니다.
+
+---
+
+
+---
+
+## 💻 Google Colab 실습 바로 열기
+
+아래 버튼을 클릭하면 이 장의 실습 노트북이 Google Colab에서 열립니다.
+
+[![Open Chapter 7 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter07/practice.ipynb)
+
+> GitHub에 업로드한 뒤 `niko2204`를 교수자 GitHub 아이디로 변경해야 버튼이 정상 동작합니다.
 
 ---
 
