@@ -3,10 +3,10 @@
 Update Google Colab links in this repository.
 
 Usage:
-    python tools/update_colab_links.py YOUR_GITHUB_ID
-    python tools/update_colab_links.py YOUR_GITHUB_ID --repo AI-Programming-with-GenAI
+    python tools/update_colab_links.py YOUR_MNU-AI-Programming
+    python tools/update_colab_links.py YOUR_MNU-AI-Programming --repo AI-Assisted-Python-Programming
 
-This script replaces the placeholder GITHUB_ID in Markdown and Jupyter Notebook files.
+This script replaces the placeholder MNU-AI-Programming in Markdown and Jupyter Notebook files.
 """
 
 from pathlib import Path
@@ -16,9 +16,9 @@ import json
 def update_text_file(path: Path, github_id: str, repo_name: str):
     text = path.read_text(encoding="utf-8")
     old_text = text
-    text = text.replace("GITHUB_ID/AI-Programming-with-GenAI", f"{github_id}/{repo_name}")
-    text = text.replace("USERNAME/AI-Programming-with-GenAI", f"{github_id}/{repo_name}")
-    text = text.replace("GITHUB_ID", github_id)
+    text = text.replace("MNU-AI-Programming/AI-Assisted-Python-Programming", f"{github_id}/{repo_name}")
+    text = text.replace("MNU-AI-Programming/AI-Assisted-Python-Programming", f"{github_id}/{repo_name}")
+    text = text.replace("MNU-AI-Programming", github_id)
     if text != old_text:
         path.write_text(text, encoding="utf-8")
         return True
@@ -30,9 +30,9 @@ def update_notebook(path: Path, github_id: str, repo_name: str):
     for cell in nb.get("cells", []):
         if isinstance(cell.get("source"), list):
             cell["source"] = [
-                s.replace("GITHUB_ID/AI-Programming-with-GenAI", f"{github_id}/{repo_name}")
-                 .replace("USERNAME/AI-Programming-with-GenAI", f"{github_id}/{repo_name}")
-                 .replace("GITHUB_ID", github_id)
+                s.replace("MNU-AI-Programming/AI-Assisted-Python-Programming", f"{github_id}/{repo_name}")
+                 .replace("MNU-AI-Programming/AI-Assisted-Python-Programming", f"{github_id}/{repo_name}")
+                 .replace("MNU-AI-Programming", github_id)
                 for s in cell["source"]
             ]
     new = json.dumps(nb, ensure_ascii=False)
@@ -44,7 +44,7 @@ def update_notebook(path: Path, github_id: str, repo_name: str):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("github_id", help="Your GitHub username or organization name")
-    parser.add_argument("--repo", default="AI-Programming-with-GenAI", help="Repository name")
+    parser.add_argument("--repo", default="AI-Assisted-Python-Programming", help="Repository name")
     args = parser.parse_args()
 
     root = Path(__file__).resolve().parents[1]

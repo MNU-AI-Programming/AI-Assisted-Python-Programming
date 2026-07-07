@@ -7,10 +7,10 @@
 예:
 
 ```text
-https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb
+https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter01/practice.ipynb
 ```
 
-GitHub에 업로드한 후 `MNU-AI-Programming`를 교수자 GitHub 아이디로 바꾸면 됩니다.
+GitHub에 업로드한 후 `MNU-AI-Programming`를 `MNU-AI-Programming`로 바꾸면 됩니다.
 
 ## 자동 변경 방법
 

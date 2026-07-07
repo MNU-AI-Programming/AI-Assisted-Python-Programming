@@ -26,7 +26,7 @@ GitHub는 다음을 할 수 있는 서비스입니다.
 이 교재 저장소는 다음과 같은 구조입니다.
 
 ```text
-AI-Programming-with-GenAI/
+AI-Assisted-Python-Programming/
 ├── README.md
 ├── SUMMARY.md
 ├── chapter01/

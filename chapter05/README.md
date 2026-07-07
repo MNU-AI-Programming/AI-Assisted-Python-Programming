@@ -1,6 +1,6 @@
 # Chapter 5. 반복문
 
-[![Open Chapter 5 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter05/practice.ipynb)
+[![Open Chapter 5 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter05/practice.ipynb)
 
 > 반복문은 같은 작업을 여러 번 자동으로 실행하게 만드는 문법입니다.  
 > 이번 장에서는 `for`와 `while`을 사용하여 반복되는 코드를 줄이고, 구구단과 숫자 맞추기 게임을 만들어 봅니다.
@@ -14,7 +14,7 @@
 
 아래 버튼을 클릭하면 이 장의 실습 노트북이 Google Colab에서 열립니다.
 
-[![Open Chapter 5 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter05/practice.ipynb)
+[![Open Chapter 5 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter05/practice.ipynb)
 
 > GitHub에 업로드한 뒤 `MNU-AI-Programming`를 교수자 GitHub 아이디로 변경해야 버튼이 정상 동작합니다.
 

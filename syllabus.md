@@ -3,13 +3,21 @@
 
 ---
 
+## 담당 교수
+
+**이영호 교수**  
+국립목포대학교 컴퓨터학부  
+Email: [youngho@ce.mokpo.ac.kr](mailto:youngho@ce.mokpo.ac.kr)
+
+---
+
 ## 1. 교과목 개요
 
 | 항목 | 내용 |
 |---|---|
 | 교과목명 | AI 활용 코딩 |
 | 영문명 | AI-Assisted Coding |
-| 대상 | 비전공 대학생, 프로그래밍 입문자 |
+| 대상 | 국립목포대학교 AI부트캠프 초급과정을 이수하기 위한 학생, 비전공 대학생, 프로그래밍 입문자 |
 | 학점 | 1학점 |
 | 수업 유형 | 이론 + Google Colab 실습 + 프로젝트 |
 | 실습 환경 | Google Colab |
@@ -154,7 +162,7 @@ AI가 만든 코드를 그대로 제출하는 것은 인정하지 않는다.
 
 ## 11. 교재 및 자료
 
-- GitHub 교재: `AI-Programming-with-GenAI`
+- GitHub 교재: `AI-Assisted-Python-Programming`
 - 실습 환경: Google Colab
 - AI 도구: ChatGPT 등 생성형 AI 도구
 - 제출: LMS 또는 GitHub 링크
