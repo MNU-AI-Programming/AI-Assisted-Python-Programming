@@ -1,7 +1,5 @@
 # Chapter 5. 반복문
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/AI-Programming-with-GenAI/blob/main/chapter05/practice.ipynb)
-
 > 반복문은 같은 작업을 여러 번 자동으로 실행하게 만드는 문법입니다.  
 > 이번 장에서는 `for`와 `while`을 사용하여 반복되는 코드를 줄이고, 구구단과 숫자 맞추기 게임을 만들어 봅니다.
 

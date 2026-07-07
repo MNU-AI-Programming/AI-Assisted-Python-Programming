@@ -1,7 +1,5 @@
 # Chapter 4. 조건문
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/AI-Programming-with-GenAI/blob/main/chapter04/practice.ipynb)
-
 > 조건문은 프로그램이 상황에 따라 다른 행동을 하도록 만드는 문법입니다.  
 > 이번 장에서는 `if`, `elif`, `else`를 사용하여 판단하는 프로그램을 만들어 봅니다.
 

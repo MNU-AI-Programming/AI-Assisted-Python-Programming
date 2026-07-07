@@ -1,7 +1,5 @@
 # Chapter 1. 생성형 AI와 AI 활용 코딩
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb)
-
 > AI는 여러분을 대신해서 공부하는 도구가 아니라,  
 > 여러분과 함께 문제를 해결하는 학습 파트너입니다.
 

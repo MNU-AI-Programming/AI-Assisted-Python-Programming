@@ -8,7 +8,6 @@
 ## 시작하기
 
 - [교재 소개](README.md)
-- [강의계획서](syllabus.md)
 
 ---
 
@@ -184,20 +183,9 @@
 
 ## 부록
 
-- [Google Colab 사용법](appendix/colab.md)
-- [GitHub 사용법](appendix/github.md)
-- [Markdown 기초](appendix/markdown.md)
-- [자주 묻는 질문](appendix/faq.md)
-- [AI Prompt 모음](prompts/README.md)
-- [코드 생성 Prompt](prompts/coding.md)
-- [디버깅 Prompt](prompts/debugging.md)
-- [리팩토링 Prompt](prompts/refactoring.md)
-- [보고서 작성 Prompt](prompts/report.md)
-
-
-## 교수자 자료
-
-- [강의계획서](syllabus.md)
-- [최종 프로젝트 평가 루브릭](instructor/project-rubric.md)
-- [저장소 기여 안내](CONTRIBUTING.md)
-- [라이선스](LICENSE)
+- Google Colab 사용법
+- GitHub 사용법
+- Markdown 기초
+- AI Prompt 모음
+- 자주 발생하는 오류
+- 과제 제출 방법

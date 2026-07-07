@@ -1,7 +1,5 @@
 # Chapter 6. 함수와 AI 활용
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/AI-Programming-with-GenAI/blob/main/chapter06/practice.ipynb)
-
 > 함수는 자주 사용하는 코드를 하나의 이름으로 묶어 다시 사용할 수 있게 해 줍니다.  
 > 이번 장에서는 함수를 만들고, AI를 활용하여 코드를 함수로 정리하고, 오류를 찾고, 더 읽기 좋은 코드로 개선하는 방법을 배웁니다.
 
