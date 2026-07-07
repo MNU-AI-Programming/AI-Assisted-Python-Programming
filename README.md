@@ -1,5 +1,5 @@
 # AI 활용 코딩
-### 생성형 AI 활용 프로그래밍
+### 비전공자를 위한 생성형 AI 활용 프로그래밍
 
 > ChatGPT와 함께 배우는 Python Programming  
 > 모든 실습은 **Google Colab**에서 진행합니다.
@@ -9,9 +9,6 @@
 ![ChatGPT](https://img.shields.io/badge/AI-ChatGPT-green)
 ![License](https://img.shields.io/badge/License-Education-yellow)
 
----
-# 대상
-### 이 자료는 국립목포대학교 AI부트캠프 초급과정을 이수하고자 하는 학생을 대상으로 만들었습니다. 
 ---
 
 ## 📖 교재 소개
@@ -184,6 +181,23 @@ AI를 사용할 때는 다음을 지켜야 합니다.
 
 ---
 
+## 🚀 Chapter별 Google Colab 바로 열기
+
+GitHub에 저장소를 업로드한 뒤, 아래 링크의 `GITHUB_ID`를 교수자 GitHub 아이디로 변경하면 학생들이 버튼을 눌러 바로 Colab 실습을 시작할 수 있습니다.
+
+| Chapter | 주제 | Colab |
+|---|---|---|
+| Chapter 1 | 생성형 AI와 AI 활용 코딩 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb) |
+| Chapter 2 | Python 시작하기 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter02/practice.ipynb) |
+| Chapter 3 | 입력과 계산 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb) |
+| Chapter 4 | 조건문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter04/practice.ipynb) |
+| Chapter 5 | 반복문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter05/practice.ipynb) |
+| Chapter 6 | 함수와 AI 활용 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter06/practice.ipynb) |
+| Chapter 7 | 리스트와 파일 처리 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter07/practice.ipynb) |
+| Chapter 8 | AI 활용 프로젝트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb) |
+
+---
+
 ## 🚀 빠른 시작
 
 1. `SUMMARY.md`에서 학습할 Chapter를 선택합니다.
@@ -192,7 +206,7 @@ AI를 사용할 때는 다음을 지켜야 합니다.
 4. 실습 코드를 실행하고 자신의 정보에 맞게 수정합니다.
 5. 과제는 `assignment.md` 안내에 따라 제출합니다.
 
-> 참고: `Open in Colab` 링크의 `USERNAME` 부분은 교수자 GitHub 계정명으로 변경해야 합니다.
+> 참고: `Open in Colab` 링크의 `GITHUB_ID` 부분은 교수자 GitHub 계정명으로 변경해야 합니다.
 
 ---
 
@@ -230,9 +244,36 @@ AI를 사용할 때는 다음을 지켜야 합니다.
 
 ---
 
-## 👨‍🏫 교수 안내
+## 👨‍🏫 교수자 안내
 
-### 컴퓨터학부 이영호 교수
-### youngho@ce.mokpo.ac.kr
+이 저장소를 수업에 사용하려면 다음을 먼저 수정하세요.
 
+1. `GITHUB_ID`을 교수자 GitHub 계정명으로 변경
+2. `syllabus.md`의 평가 비율과 제출 방식 확인
+3. LMS 또는 GitHub Classroom 제출 방식 결정
+4. Chapter별 `assignment.md` 마감일 추가
+5. 공개 범위와 AI 사용 원칙을 학생에게 안내
+---
+
+## 🔧 Colab 링크에서 GITHUB_ID 바꾸기
+
+이 저장소에는 Colab 링크가 다음 형식으로 들어 있습니다.
+
+```text
+https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb
+```
+
+GitHub에 업로드한 뒤 `GITHUB_ID`를 교수자 GitHub 아이디로 바꾸면 됩니다.
+
+예를 들어 GitHub 아이디가 `youngholee`라면 다음과 같이 바꿉니다.
+
+```text
+https://colab.research.google.com/github/youngholee/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb
+```
+
+한 번에 바꾸려면 아래 스크립트를 사용할 수 있습니다.
+
+```bash
+python tools/update_colab_links.py youngholee
+```
 

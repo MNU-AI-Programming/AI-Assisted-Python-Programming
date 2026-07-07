@@ -1,9 +1,22 @@
 # Chapter 1. 생성형 AI와 AI 활용 코딩
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb)
+[![Open Chapter 1 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb)
 
 > AI는 여러분을 대신해서 공부하는 도구가 아니라,  
 > 여러분과 함께 문제를 해결하는 학습 파트너입니다.
+
+---
+
+
+---
+
+## 💻 Google Colab 실습 바로 열기
+
+아래 버튼을 클릭하면 이 장의 실습 노트북이 Google Colab에서 열립니다.
+
+[![Open Chapter 1 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GITHUB_ID/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb)
+
+> GitHub에 업로드한 뒤 `GITHUB_ID`를 교수자 GitHub 아이디로 변경해야 버튼이 정상 동작합니다.
 
 ---
 
