@@ -14,14 +14,14 @@
 
 ## Google Colab 바로 열기
 
-- [Chapter 1 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb)
-- [Chapter 2 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter02/practice.ipynb)
-- [Chapter 3 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb)
-- [Chapter 4 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter04/practice.ipynb)
-- [Chapter 5 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter05/practice.ipynb)
-- [Chapter 6 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter06/practice.ipynb)
-- [Chapter 7 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter07/practice.ipynb)
-- [Chapter 8 Colab](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb)
+- [Chapter 1 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb)
+- [Chapter 2 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter02/practice.ipynb)
+- [Chapter 3 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb)
+- [Chapter 4 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter04/practice.ipynb)
+- [Chapter 5 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter05/practice.ipynb)
+- [Chapter 6 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter06/practice.ipynb)
+- [Chapter 7 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter07/practice.ipynb)
+- [Chapter 8 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb)
 
 
 ---

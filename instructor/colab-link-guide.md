@@ -2,22 +2,22 @@
 
 이 저장소의 각 Chapter에는 Google Colab 실행 버튼이 포함되어 있습니다.
 
-초기 상태에서는 링크에 `niko2204`라는 자리표시자가 들어 있습니다.
+초기 상태에서는 링크에 `MNU-AI-Programming`라는 자리표시자가 들어 있습니다.
 
 예:
 
 ```text
-https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb
+https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter01/practice.ipynb
 ```
 
-GitHub에 업로드한 후 `niko2204`를 교수자 GitHub 아이디로 바꾸면 됩니다.
+GitHub에 업로드한 후 `MNU-AI-Programming`를 교수자 GitHub 아이디로 바꾸면 됩니다.
 
 ## 자동 변경 방법
 
 터미널에서 다음 명령을 실행합니다.
 
 ```bash
-python tools/update_colab_links.py YOUR_niko2204
+python tools/update_colab_links.py YOUR_MNU-AI-Programming
 ```
 
 예:

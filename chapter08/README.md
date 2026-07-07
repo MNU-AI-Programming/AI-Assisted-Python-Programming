@@ -1,6 +1,6 @@
 # Chapter 8. AI 활용 프로젝트
 
-[![Open Chapter 8 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb)
+[![Open Chapter 8 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb)
 
 > 이번 장에서는 지금까지 배운 내용을 활용하여 나만의 Python 프로그램을 만듭니다.  
 > 핵심은 “AI가 만든 코드를 그대로 제출하는 것”이 아니라, **AI와 협업하여 문제를 해결하는 과정**을 기록하는 것입니다.
@@ -14,9 +14,9 @@
 
 아래 버튼을 클릭하면 이 장의 실습 노트북이 Google Colab에서 열립니다.
 
-[![Open Chapter 8 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb)
+[![Open Chapter 8 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter08/practice.ipynb)
 
-> GitHub에 업로드한 뒤 `niko2204`를 교수자 GitHub 아이디로 변경해야 버튼이 정상 동작합니다.
+> GitHub에 업로드한 뒤 `MNU-AI-Programming`를 교수자 GitHub 아이디로 변경해야 버튼이 정상 동작합니다.
 
 ---
 

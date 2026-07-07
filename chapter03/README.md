@@ -1,6 +1,6 @@
 # Chapter 3. 입력과 계산
 
-[![Open Chapter 3 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb)
+[![Open Chapter 3 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb)
 
 > 프로그램은 사용자와 대화할 수 있어야 합니다.  
 > 이번 장에서는 사용자의 입력을 받고, 숫자를 계산하여 결과를 출력하는 방법을 배웁니다.
@@ -14,9 +14,9 @@
 
 아래 버튼을 클릭하면 이 장의 실습 노트북이 Google Colab에서 열립니다.
 
-[![Open Chapter 3 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/niko2204/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb)
+[![Open Chapter 3 In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Programming-with-GenAI/blob/main/chapter03/practice.ipynb)
 
-> GitHub에 업로드한 뒤 `niko2204`를 교수자 GitHub 아이디로 변경해야 버튼이 정상 동작합니다.
+> GitHub에 업로드한 뒤 `MNU-AI-Programming`를 교수자 GitHub 아이디로 변경해야 버튼이 정상 동작합니다.
 
 ---
 
