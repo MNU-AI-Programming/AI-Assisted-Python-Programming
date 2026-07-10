@@ -8,3 +8,7 @@
 - 영상 1. AI-Assisted Python Programming 강의 영상
   - 영상 보기: https://youtu.be/UpKHA7CONho
   - 학생들은 영상을 시청하면서 Python 기본 개념과 AI 도구를 활용한 프로그래밍 방법을 이해합니다.
+- 영상 2. 과제 설명
+  - 영상보기: https://youtu.be/jT0mSafACVY
+- 영상 3. printf(), 변수
+  - 영상보기: https://youtu.be/Os1SIPSasDM
