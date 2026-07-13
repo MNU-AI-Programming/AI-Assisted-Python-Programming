@@ -16,3 +16,5 @@
   - 영상보기: https://youtu.be/S8PD7UFLPQc
 - 영상 5. 과제1 설명
   - 영상보기: https://youtu.be/28ZuCO1fMa0
+- 영상 6. chap3.
+  - 영상보기: https://youtu.be/RI1lmyYzd2w
