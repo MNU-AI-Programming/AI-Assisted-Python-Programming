@@ -18,3 +18,5 @@
   - 영상보기: https://youtu.be/28ZuCO1fMa0
 - 영상 6. chap3.
   - 영상보기: https://youtu.be/RI1lmyYzd2w
+- 영상 7. chap4
+  - 영상보기: https://youtu.be/swSYp_P1aP8
