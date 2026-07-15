@@ -22,3 +22,5 @@
   - 영상보기: https://youtu.be/swSYp_P1aP8
 - 영상 8. chap5
   - 영상보기: https://youtu.be/npdh3jrKRw8
+- 영상 9. 과제2 설명
+  - 영상보기: https://youtu.be/HG9a3yHvk1k
