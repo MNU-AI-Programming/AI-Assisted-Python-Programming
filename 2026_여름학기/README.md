@@ -24,3 +24,7 @@
   - 영상보기: https://youtu.be/npdh3jrKRw8
 - 영상 9. 과제2 설명
   - 영상보기: https://youtu.be/HG9a3yHvk1k
+- 영상 10. 클래스
+  - 영상보기: https://youtu.be/bMaXqUT57q8
+- 영상 11. numpy
+- 영상 12. pandas
