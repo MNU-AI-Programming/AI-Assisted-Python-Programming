@@ -27,4 +27,6 @@
 - 영상 10. 클래스
   - 영상보기: https://youtu.be/bMaXqUT57q8
 - 영상 11. numpy
+  - 영상보기: https://youtu.be/njMgIYAguZ4
 - 영상 12. pandas
+  - 영상보기: https://youtu.be/WETgwaI6oUs
