@@ -13,7 +13,6 @@
 | 배점 | 15점(교과목 총점 기준) |
 | 작업 환경 | Google Colab |
 | 과제 형태 | 수업 중 개인 실기 |
-| 노트북 이름 | `학번_이름_assignment03.ipynb` |
 | 제출 방법 | Google Colab에서 `youngho@ce.mokpo.ac.kr`에 **뷰어** 권한으로 공유 |
 
 ## 2. 과제 목적
