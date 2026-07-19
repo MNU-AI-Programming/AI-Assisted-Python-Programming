@@ -1,281 +1,76 @@
-# AI 활용 코딩
-### 비전공자를 위한 생성형 AI 활용 프로그래밍
+# AI 활용 Python 프로그래밍
+## AI-Assisted Python Programming — 15주 정규학기 패키지
 
-> ChatGPT와 함께 배우는 Python Programming  
-> 모든 실습은 **Google Colab**에서 진행합니다.
+> 이영호 교수 | 국립목포대학교 컴퓨터학부  
+> Google Colab · GitHub · 생성형 AI를 활용한 15주 실습 중심 교과목
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Google%20Colab](https://img.shields.io/badge/Google-Colab-orange)
-![ChatGPT](https://img.shields.io/badge/AI-ChatGPT-green)
-![License](https://img.shields.io/badge/License-Education-yellow)
+본 패키지는 기존 8개 Chapter의 입문 흐름을 정규학기 수준으로 확장합니다. Python 핵심 문법에서 시작해 함수, 파일, 클래스, NumPy, pandas, matplotlib, AI 디버깅·리팩토링을 거쳐 재현 가능한 데이터 분석 프로젝트로 마무리합니다.
 
----
+## 빠른 시작
 
----
+1. `course/15-week-plan.md`에서 운영·평가 계획을 확인합니다.
+2. `weeks/week01`부터 해당 주차의 `README.md`와 `practice.ipynb`를 사용합니다.
+3. 학생은 Colab에서 실습 후 `assignment.md` 형식으로 제출합니다.
+4. 교수자는 `instructor/operation-guide.md`와 `instructor/quiz-answer-key.md`를 사용합니다.
+5. 배포 전 `python scripts/validate_package.py --execute`로 전체 노트북을 점검합니다.
 
-## 🏫 강의 대상
+## 수업 기본값
 
-이 강의는 **국립목포대학교 AI부트캠프 초급과정을 이수하기 위한 학생**을 대상으로 합니다.
+| 항목 | 운영안 |
+|---|---|
+| 기간 | 15주 정규학기 |
+| 기본 수업 | 주 2시간, 이론+안내 실습+독립 실습+피드백 |
+| 확장 수업 | 주 3시간: 확장 과제·동료 코드 리뷰·프로젝트 클리닉 추가 |
+| 선수 과목 | 교양필수 `AI 활용 프로그래밍` 이수 또는 Python 기초 |
+| 환경 | Google Colab, GitHub, 생성형 AI |
+| 핵심 평가 | 주차별 실습, 중간 실기, 최종 데이터 분석 프로젝트 |
 
-프로그래밍을 처음 배우는 학생도 Google Colab과 생성형 AI를 활용하여 Python 기초 코딩을 경험할 수 있도록 구성되어 있습니다.
-
----
-
-## 👨‍🏫 담당 교수
-
-**이영호 교수**  
-국립목포대학교 컴퓨터학부
-
-- Email: [youngho@ce.mokpo.ac.kr](mailto:youngho@ce.mokpo.ac.kr)
-- GitHub Organization: [MNU-AI-Programming](https://github.com/MNU-AI-Programming)
-- Course Repository: [AI-Assisted-Python-Programming](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming)
-
-## 📖 교재 소개
-
-본 교재는 **국립목포대학교 AI부트캠프 초급과정**을 이수하기 위한 학생들이 생성형 AI와 함께 Python 프로그래밍을 학습할 수 있도록 설계되었습니다.
-
-**AI 활용 코딩**은 프로그래밍을 처음 배우는 비전공 대학생을 위한 생성형 AI 활용 프로그래밍 입문 교재입니다.
-
-이 교재는 Python 문법을 모두 암기하는 것을 목표로 하지 않습니다.  
-대신 생성형 AI를 활용하여 문제를 이해하고, 코드를 생성하고, 실행하고, 수정하며, 자신만의 프로그램을 만드는 능력을 기르는 것을 목표로 합니다.
-
-우리는 다음과 같은 흐름으로 학습합니다.
-
-```text
-문제 이해
-↓
-AI에게 질문하기
-↓
-코드 생성
-↓
-코드 이해
-↓
-Google Colab에서 실행
-↓
-오류 수정
-↓
-GitHub에 정리
-```
-
----
-
-## 🎯 학습 목표
-
-이 교재를 학습하면 다음을 할 수 있습니다.
-
-- 생성형 AI를 활용하여 간단한 Python 프로그램을 작성할 수 있다.
-- AI가 생성한 코드를 이해하고 수정할 수 있다.
-- Google Colab에서 Python 코드를 실행할 수 있다.
-- Python의 기초 문법을 활용하여 문제를 해결할 수 있다.
-- AI와 협업하여 간단한 프로젝트를 완성할 수 있다.
-- GitHub를 활용하여 학습 결과물을 정리할 수 있다.
-
----
-
-## 👨‍🎓 학습 대상
-
-이 교재는 다음 학습자를 대상으로 합니다.
-
-- 프로그래밍을 처음 배우는 대학생
-- 컴퓨터공학 비전공자
-- Python을 처음 배우는 사람
-- ChatGPT를 활용하여 코딩을 배우고 싶은 사람
-- 설치 없이 Google Colab으로 실습하고 싶은 사람
-
----
-
-## 🛠 준비물
-
-별도의 개발 환경 설치는 필요하지 않습니다.
-
-필요한 것은 다음과 같습니다.
-
-- Google 계정
-- ChatGPT 계정
-- GitHub 계정
-- 웹 브라우저
-
----
-
-## 📚 교재 구성
-
-| Chapter | 주제 | 주요 실습 |
-|---|---|---|
-| Chapter 1 | 생성형 AI와 AI 활용 코딩 | ChatGPT로 코드 생성, Colab 실행 |
-| Chapter 2 | Python 시작하기 | 출력, 변수, 자료형 |
-| Chapter 3 | 입력과 계산 | input(), BMI 계산기 |
-| Chapter 4 | 조건문 | 학점 계산기, 로그인 프로그램 |
-| Chapter 5 | 반복문 | 구구단, 숫자 맞추기 |
-| Chapter 6 | 함수와 AI 활용 | 함수 만들기, 디버깅, 리팩토링 |
-| Chapter 7 | 리스트와 파일 처리 | 성적 관리, CSV 저장 |
-| Chapter 8 | AI 활용 프로젝트 | 나만의 프로그램 제작 |
-
----
-
-## 📂 저장소 구조
+## 저장소 구조
 
 ```text
 AI-Assisted-Python-Programming/
-│
 ├── README.md
 ├── SUMMARY.md
-│
-├── chapter01/
-│   ├── README.md
-│   ├── practice.ipynb
-│   ├── slides.md
-│   ├── assignment.md
-│   └── quiz.md
-│
-├── chapter02/
-├── chapter03/
-├── chapter04/
-├── chapter05/
-├── chapter06/
-├── chapter07/
-└── chapter08/
+├── requirements.txt
+├── course/                 # 15주 계획·평가·교과목 성과
+├── weeks/week01~week15/    # 주차별 README·Colab·슬라이드·과제·퀴즈
+├── assets/diagrams/        # 주차별 개념 순서도 SVG 15종
+├── datasets/               # 수업용 가상 CSV 4종
+├── projects/               # 중간·최종 프로젝트 안내
+├── rubrics/                # 실습·중간·최종 평가표
+├── templates/              # 학생 제출·AI 활용 기록 템플릿
+├── instructor/             # 운영 가이드·퀴즈 정답
+├── scripts/                # 패키지/노트북 검증
+└── .github/workflows/      # 자동 검증
 ```
 
----
+## 주차별 Colab
 
-## 💻 실습 환경: Google Colab
+| 주차 | 주제 | 실행 |
+|---:|---|---|
+| 1 | AI 협업 코딩과 Colab 시작 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week01/practice.ipynb) |
+| 2 | 입력·계산·문자열 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week02/practice.ipynb) |
+| 3 | 조건문과 반복문으로 흐름 제어 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week03/practice.ipynb) |
+| 4 | 리스트·튜플·집합·딕셔너리 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week04/practice.ipynb) |
+| 5 | 함수·모듈·테스트 가능한 코드 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week05/practice.ipynb) |
+| 6 | 파일·CSV·예외 처리 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week06/practice.ipynb) |
+| 7 | 클래스와 객체지향 설계 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week07/practice.ipynb) |
+| 8 | 중간 실기: Python 문제 해결 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week08/practice.ipynb) |
+| 9 | NumPy와 배열 사고 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week09/practice.ipynb) |
+| 10 | pandas로 데이터 불러오기와 탐색 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/practice.ipynb) |
+| 11 | 데이터 정제·변환·집계 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week11/practice.ipynb) |
+| 12 | 탐색적 데이터 분석과 프로젝트 기획 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/practice.ipynb) |
+| 13 | matplotlib 데이터 시각화 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week13/practice.ipynb) |
+| 14 | AI 디버깅·테스트·리팩토링 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week14/practice.ipynb) |
+| 15 | 최종 프로젝트 발표와 재현성 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/practice.ipynb) |
 
-이 교재의 모든 실습은 **Google Colab**에서 진행합니다.
+## 학생 제출 원칙
 
-Google Colab을 사용하는 이유는 다음과 같습니다.
+- AI가 만든 코드는 반드시 직접 실행하고 설명합니다.
+- 사용한 Prompt, 채택한 제안, 직접 수정한 부분과 이유를 기록합니다.
+- 정상 사례와 경계·오류 사례를 함께 검증합니다.
+- 개인정보, API 키, 타인의 결과물을 저장소에 올리지 않습니다.
 
-- Python 설치가 필요 없습니다.
-- VS Code 설치가 필요 없습니다.
-- 웹 브라우저만 있으면 실행할 수 있습니다.
-- Google Drive에 실습 파일을 저장할 수 있습니다.
-- 링크 공유가 쉽습니다.
-- 비전공자도 쉽게 시작할 수 있습니다.
+## 기존 8개 Chapter 저장소와 통합
 
----
-
-## 🤖 AI 활용 원칙
-
-AI는 정답을 대신 알려주는 도구가 아닙니다.  
-AI는 학습을 도와주는 협업 도구입니다.
-
-AI를 사용할 때는 다음을 지켜야 합니다.
-
-1. AI가 만든 코드는 반드시 실행해 본다.
-2. 코드의 의미를 이해하려고 노력한다.
-3. 오류가 발생하면 오류 메시지를 AI에게 설명하게 한다.
-4. AI가 만든 답을 그대로 제출하지 않는다.
-5. 자신의 이해와 수정 과정을 함께 기록한다.
-
----
-
-## 🧭 학습 방법
-
-각 Chapter는 다음 순서로 학습합니다.
-
-1. 교재 본문 읽기
-2. AI Prompt 실행하기
-3. Google Colab 실습하기
-4. 코드 수정하기
-5. 퀴즈 풀기
-6. 과제 수행하기
-7. GitHub 또는 LMS에 제출하기
-
----
-
-## 📌 이 교재의 핵심 문장
-
-> 코딩을 잘한다는 것은 모든 문법을 외우는 것이 아니라,  
-> 문제를 이해하고 AI와 협력하여 해결 방법을 만들어 내는 능력입니다.
-
----
-
-## 📄 라이선스
-
-이 교재는 교육 목적으로 자유롭게 활용할 수 있습니다.  
-수정 및 재배포 시 출처를 표시해 주세요.
-
----
-
-즐겁게 AI와 함께 코딩을 시작해 봅시다.
-
-🎉 Happy AI Coding!
-
----
-
-## 🚀 Chapter별 Google Colab 바로 열기
-
-GitHub에 저장소를 업로드한 뒤, 아래 링크의 `MNU-AI-Programming`를 교수자 GitHub 아이디로 변경하면 학생들이 버튼을 눌러 바로 Colab 실습을 시작할 수 있습니다.
-
-| Chapter | 주제 | Colab |
-|---|---|---|
-| Chapter 1 | 생성형 AI와 AI 활용 코딩 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter01/practice.ipynb) |
-| Chapter 2 | Python 시작하기 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter02/practice.ipynb) |
-| Chapter 3 | 입력과 계산 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter03/practice.ipynb) |
-| Chapter 4 | 조건문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter04/practice.ipynb) |
-| Chapter 5 | 반복문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter05/practice.ipynb) |
-| Chapter 6 | 함수와 AI 활용 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter06/practice.ipynb) |
-| Chapter 7 | 리스트와 파일 처리 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter07/practice.ipynb) |
-| Chapter 8 | AI 활용 프로젝트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter08/practice.ipynb) |
-
----
-
----
-
-## 🔗 저장소 주소
-
-```text
-https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming
-```
-
-Chapter 1 예시 주소:
-
-```text
-https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/chapter01
-```
-
-## 🚀 빠른 시작
-
-1. `SUMMARY.md`에서 학습할 Chapter를 선택합니다.
-2. Chapter의 `README.md`를 읽습니다.
-3. `Open in Colab` 버튼을 눌러 실습 노트북을 엽니다.
-4. 실습 코드를 실행하고 자신의 정보에 맞게 수정합니다.
-5. 과제는 `assignment.md` 안내에 따라 제출합니다.
-
-> 참고: `Open in Colab` 링크의 `MNU-AI-Programming` 부분은 교수자 GitHub 계정명으로 변경해야 합니다.
-
----
-
-## 🧩 추가 자료
-
-| 자료 | 설명 |
-|---|---|
-| [강의계획서](syllabus.md) | 1학점 교양교과목 운영 계획 |
-| [Google Colab 사용법](appendix/colab.md) | 실습 노트북 실행·저장·공유 방법 |
-| [GitHub 사용법](appendix/github.md) | 저장소 읽기와 과제 제출 기초 |
-| [Markdown 기초](appendix/markdown.md) | 보고서 작성용 Markdown 문법 |
-| [자주 묻는 질문](appendix/faq.md) | 학생 FAQ |
-| [AI Prompt 모음](prompts/README.md) | 코드 생성·디버깅·보고서 Prompt |
-| [최종 프로젝트 루브릭](instructor/project-rubric.md) | 교수자용 평가 기준 |
-
----
-
-## 👩‍💻 학생 제출물 기본 구성
-
-각 과제는 다음 내용을 포함하는 것을 권장합니다.
-
-```markdown
-# 과제 제목
-
-## 1. 사용한 AI Prompt
-
-## 2. 최종 코드
-
-## 3. 실행 결과
-
-## 4. 직접 수정한 부분
-
-## 5. 느낀 점
-```
-
----
-
+`MIGRATION.md`에 기존 부트캠프 자료를 보존하면서 이 15주 패키지를 병합하는 순서를 제시했습니다. 이 압축 파일은 GitHub를 직접 변경하지 않는 독립형 초안입니다.

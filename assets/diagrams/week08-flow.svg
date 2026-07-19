@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">Week 08 중간 실기 문제 해결 순서</title>
+  <desc id="desc">네 단계의 왼쪽에서 오른쪽 순서도: 요구사항 분석 → 데이터 불러오기 → 함수로 분석 → 테스트·기술 메모</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B" />
+    </marker>
+  </defs>
+  <rect width="1280" height="420" rx="28" fill="#F8FAFC" />
+  <text x="640" y="62" text-anchor="middle" fill="#0F2747" font-size="38" font-weight="700"
+        font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">중간 실기 문제 해결 순서</text>
+  <g font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <line x1="303" y1="190" x2="337" y2="190" stroke="#64748B" stroke-width="5" marker-end="url(#arrow)" /><line x1="613" y1="190" x2="647" y2="190" stroke="#64748B" stroke-width="5" marker-end="url(#arrow)" /><line x1="923" y1="190" x2="957" y2="190" stroke="#64748B" stroke-width="5" marker-end="url(#arrow)" />
+
+  <g>
+    <rect x="35" y="105" width="260" height="170" rx="24" fill="#E8F1FF" stroke="#2A6FBB" stroke-width="3" />
+    <circle cx="73" cy="140" r="22" fill="#2A6FBB" />
+    <text x="73" y="148" text-anchor="middle" fill="#FFFFFF" font-size="24" font-weight="700">1</text>
+    <text text-anchor="middle" fill="#172033" font-size="30" font-weight="700"><tspan x="165" y="185">요구사항 분석</tspan></text>
+  </g>
+  <g>
+    <rect x="345" y="105" width="260" height="170" rx="24" fill="#EAF7EE" stroke="#2F7D4A" stroke-width="3" />
+    <circle cx="383" cy="140" r="22" fill="#2F7D4A" />
+    <text x="383" y="148" text-anchor="middle" fill="#FFFFFF" font-size="24" font-weight="700">2</text>
+    <text text-anchor="middle" fill="#172033" font-size="30" font-weight="700"><tspan x="475" y="185">데이터 불러오기</tspan></text>
+  </g>
+  <g>
+    <rect x="655" y="105" width="260" height="170" rx="24" fill="#FFF4E5" stroke="#B76A00" stroke-width="3" />
+    <circle cx="693" cy="140" r="22" fill="#B76A00" />
+    <text x="693" y="148" text-anchor="middle" fill="#FFFFFF" font-size="24" font-weight="700">3</text>
+    <text text-anchor="middle" fill="#172033" font-size="30" font-weight="700"><tspan x="785" y="185">함수로 분석</tspan></text>
+  </g>
+  <g>
+    <rect x="965" y="105" width="260" height="170" rx="24" fill="#F2ECFF" stroke="#7357A6" stroke-width="3" />
+    <circle cx="1003" cy="140" r="22" fill="#7357A6" />
+    <text x="1003" y="148" text-anchor="middle" fill="#FFFFFF" font-size="24" font-weight="700">4</text>
+    <text text-anchor="middle" fill="#172033" font-size="30" font-weight="700"><tspan x="1095" y="185">테스트·기술 메모</tspan></text>
+  </g>
+  </g>
+  <text x="640" y="353" text-anchor="middle" fill="#334155" font-size="25"
+        font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">정답 코드뿐 아니라 요구사항, 실행 증거, 수정 과정이 평가 자료가 됩니다.</text>
+  <text x="1215" y="395" text-anchor="end" fill="#64748B" font-size="18"
+        font-family="Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">AI 활용 Python 프로그래밍 · Week 08</text>
+</svg>
