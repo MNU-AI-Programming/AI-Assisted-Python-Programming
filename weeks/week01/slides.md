@@ -87,7 +87,7 @@ print("2 + 3 =", 2 + 3)
 # Level 2 — 핵심 코드 읽기
 
 ```python
-course = "AI 활용 Python 프로그래밍"
+course = "AI활용코딩연습"
 professor = "이영호 교수"
 tools = ["ChatGPT", "Google Colab", "GitHub"]
 print(f"{course} | {professor}")
