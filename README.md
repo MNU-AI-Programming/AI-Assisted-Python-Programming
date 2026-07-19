@@ -1,6 +1,6 @@
 # AI 활용 Python 프로그래밍
 
-> **AI-Assisted Python Programming**  
+> **AI활용코딩**  
 > 이영호 교수 · 국립목포대학교 컴퓨터학부  
 > 문의: [youngho@ce.mokpo.ac.kr](mailto:youngho@ce.mokpo.ac.kr)
 
@@ -9,17 +9,17 @@
 [![Marp](https://img.shields.io/badge/Slides-Marp-0288D1)](https://marp.app/)
 [![Course](https://img.shields.io/badge/Course-15%20Weeks-2E7D32)](course/15-week-plan.md)
 
-생성형 AI를 **정답 생성기**가 아니라 문제 해결을 돕는 **학습 파트너**로 활용하며 Python을 배우는 15주 정규 교과목입니다. 학생은 AI가 제안한 코드를 직접 읽고, 실행하고, 검증하고, 수정하는 과정을 반복합니다. Python 핵심 문법부터 객체지향 프로그래밍, NumPy, pandas, 데이터 시각화, AI 기반 디버깅·리팩토링, 재현 가능한 데이터 분석 프로젝트까지 단계적으로 학습합니다.
+생성형 AI를 **정답 생성기**가 아니라 문제 해결을 돕는 **학습 파트너**로 활용하며 Python을 배우는 15주 정규 교과목입니다. 학생은 AI가 제안한 코드를 직접 읽고, 실행하고, 검증하고, 수정하는 과정을 반복합니다. Python 핵심 문법부터 객체지향 프로그래밍, NumPy, pandas, 데이터 시각화, AI 기반 디버깅·리팩토링, 재현 가능한 데이터 분석 프로젝트까지 단계적으로 학습합니다. 본 교과목은  국립목포대학교 AI부트캠프사업단 초급과정입니다.
 
 ## 교과목 개요
 
 | 항목 | 내용 |
 |---|---|
-| 교과목명 | AI 활용 Python 프로그래밍 |
-| 영문명 | AI-Assisted Python Programming |
-| 운영 기간 | 15주 정규학기 |
-| 기본 수업 | 주 2시간: 핵심 이론, 안내 실습, 독립 실습, 피드백 |
-| 확장 수업 | 주 3시간: 확장 과제, 동료 코드 리뷰, 프로젝트 클리닉 추가 |
+| 교과목명 | AI활용코딩|
+| 영문명 | AI-Assisted Python coding |
+| 운영 기간 | 15시간 (1학점) |
+| 기본 수업 | 주 1시간: 핵심 이론, 안내 실습, 독립 실습, 피드백 |
+| 확장 수업 | 주 2시간: 확장 과제, 동료 코드 리뷰, 프로젝트 클리닉 추가 |
 | 선수 학습 | `AI 활용 프로그래밍` 이수 또는 Python 기초 |
 | 실습 환경 | Google Colab, GitHub, 생성형 AI |
 | 주요 평가 | 주차별 실습·과제, 중간 실기 프로젝트, 최종 데이터 분석 프로젝트 |
@@ -150,9 +150,11 @@ python scripts/validate_package.py --execute
 
 ## 라이선스 및 이용
 
-이 저장소의 자료는 국립목포대학교 「AI 활용 Python 프로그래밍」 수업을 위해 제작되었습니다. 외부 활용·수정·재배포 시에는 저장소의 라이선스와 출처 표시 조건을 먼저 확인해 주세요.
+이 저장소의 자료는 국립목포대학교 「AI활용코딩」 수업을 위해 제작되었습니다. 외부 활용·수정·재배포 시에는 저장소의 라이선스와 출처 표시 조건을 먼저 확인해 주세요.
 
 ---
 
 **담당 교수:** 이영호 · 국립목포대학교 컴퓨터학부  
 **GitHub:** [MNU-AI-Programming/AI-Assisted-Python-Programming](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming)
+
+![](./assets/images/이영호교수.png)
