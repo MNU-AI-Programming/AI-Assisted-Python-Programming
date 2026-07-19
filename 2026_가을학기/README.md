@@ -46,11 +46,11 @@
 
 | 일차 | 날짜 | 1차시 영상 | 2차시 영상 | 3차시 영상 | 주요 실습·산출물 | 연계 자료 |
 |---:|---|---|---|---|---|---|
-| 1일차 | 9월 7일(월) | [▶ AI 협업 코딩과 Colab](https://youtu.be/DAY1_VIDEO1_ID) | [▶ 입력·계산·문자열](https://youtu.be/DAY1_VIDEO2_ID) | [▶ 조건문과 반복문](https://youtu.be/DAY1_VIDEO3_ID) | Colab 환경 점검, 입력·계산 프로그램, 조건·반복 문제 해결 | [1주차](weeks/week01/README.md) · [2주차](weeks/week02/README.md) · [3주차](weeks/week03/README.md) |
-| 2일차 | 9월 8일(화) | [▶ 리스트·튜플·집합·딕셔너리](https://youtu.be/DAY2_VIDEO1_ID) | [▶ 함수·모듈·테스트](https://youtu.be/DAY2_VIDEO2_ID) | [▶ 파일·CSV·예외 처리](https://youtu.be/DAY2_VIDEO3_ID) | 학생 성적 데이터 구조화, 재사용 함수, 안전한 CSV 처리 | [4주차](weeks/week04/README.md) · [5주차](weeks/week05/README.md) · [6주차](weeks/week06/README.md) |
-| 3일차 | 9월 9일(수) | [▶ 클래스와 객체지향 설계](https://youtu.be/DAY3_VIDEO1_ID) | [▶ NumPy와 배열 사고](https://youtu.be/DAY3_VIDEO2_ID) | [▶ pandas 데이터 탐색](https://youtu.be/DAY3_VIDEO3_ID) | 도서 대출 클래스, 배열 연산, CSV 데이터 기초 탐색 | [7주차](weeks/week07/README.md) · [9주차](weeks/week09/README.md) · [10주차](weeks/week10/README.md) |
-| 4일차 | 9월 10일(목) | [▶ 데이터 정제·변환·집계](https://youtu.be/DAY4_VIDEO1_ID) | [▶ 탐색적 데이터 분석](https://youtu.be/DAY4_VIDEO2_ID) | [▶ matplotlib 시각화](https://youtu.be/DAY4_VIDEO3_ID) | 설문 데이터 정제, 분석 질문 설정, 차트와 해석 작성 | [11주차](weeks/week11/README.md) · [12주차](weeks/week12/README.md) · [13주차](weeks/week13/README.md) |
-| 5일차 | 9월 11일(금) | [▶ AI 디버깅과 테스트](https://youtu.be/DAY5_VIDEO1_ID) | [▶ 코드 리팩토링과 재현성](https://youtu.be/DAY5_VIDEO2_ID) | [▶ 최종 프로젝트와 발표](https://youtu.be/DAY5_VIDEO3_ID) | 오류 진단, 코드 개선, 최종 노트북 완성 및 발표 | [14주차](weeks/week14/README.md) · [15주차](weeks/week15/README.md) |
+| 1일차 | 9월 7일(월) | [▶ AI 협업 코딩과 Colab](https://youtu.be/DAY1_VIDEO1_ID) | [▶ 입력·계산·문자열](https://youtu.be/DAY1_VIDEO2_ID) | [▶ 조건문과 반복문](https://youtu.be/DAY1_VIDEO3_ID) | Colab 환경 점검, 입력·계산 프로그램, 조건·반복 문제 해결 | [1주차](../weeks/week01/README.md) · [2주차](../weeks/week02/README.md) · [3주차](../weeks/week03/README.md) |
+| 2일차 | 9월 8일(화) | [▶ 리스트·튜플·집합·딕셔너리](https://youtu.be/DAY2_VIDEO1_ID) | [▶ 함수·모듈·테스트](https://youtu.be/DAY2_VIDEO2_ID) | [▶ 파일·CSV·예외 처리](https://youtu.be/DAY2_VIDEO3_ID) | 학생 성적 데이터 구조화, 재사용 함수, 안전한 CSV 처리 | [4주차](../weeks/week04/README.md) · [5주차](../weeks/week05/README.md) · [6주차](../weeks/week06/README.md) |
+| 3일차 | 9월 9일(수) | [▶ 클래스와 객체지향 설계](https://youtu.be/DAY3_VIDEO1_ID) | [▶ NumPy와 배열 사고](https://youtu.be/DAY3_VIDEO2_ID) | [▶ pandas 데이터 탐색](https://youtu.be/DAY3_VIDEO3_ID) | 도서 대출 클래스, 배열 연산, CSV 데이터 기초 탐색 | [7주차](../weeks/week07/README.md) · [9주차](../weeks/week09/README.md) · [10주차](../weeks/week10/README.md) |
+| 4일차 | 9월 10일(목) | [▶ 데이터 정제·변환·집계](https://youtu.be/DAY4_VIDEO1_ID) | [▶ 탐색적 데이터 분석](https://youtu.be/DAY4_VIDEO2_ID) | [▶ matplotlib 시각화](https://youtu.be/DAY4_VIDEO3_ID) | 설문 데이터 정제, 분석 질문 설정, 차트와 해석 작성 | [11주차](../weeks/week11/README.md) · [12주차](../weeks/week12/README.md) · [13주차](../weeks/week13/README.md) |
+| 5일차 | 9월 11일(금) | [▶ AI 디버깅과 테스트](https://youtu.be/DAY5_VIDEO1_ID) | [▶ 코드 리팩토링과 재현성](https://youtu.be/DAY5_VIDEO2_ID) | [▶ 최종 프로젝트와 발표](https://youtu.be/DAY5_VIDEO3_ID) | 오류 진단, 코드 개선, 최종 노트북 완성 및 발표 | [14주차](../weeks/week14/README.md) |
 
 <!-- 링크 교체 예시: https://youtu.be/DAY1_VIDEO1_ID → https://youtu.be/실제영상ID -->
 
