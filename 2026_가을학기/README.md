@@ -11,7 +11,7 @@
 
 ## 교과목 소개
 
-**AI활용코딩연습(ZBE135)** 은 생성형 AI를 단순한 정답 생성기가 아니라 코드를 함께 설계하고 검증하는 **학습 파트너**로 활용하는 1학점 집중수업입니다.
+**AI활용코딩연습(ZBE135)**은 생성형 AI를 단순한 정답 생성기가 아니라 코드를 함께 설계하고 검증하는 **학습 파트너**로 활용하는 1학점 집중수업입니다.
 
 학생은 Python 핵심 문법을 복습한 뒤 자료구조, 함수, 파일 처리, 객체지향 프로그래밍, NumPy, pandas, 데이터 시각화를 실습합니다. 모든 과정에서 AI가 제안한 코드를 직접 읽고 실행하며, 오류와 한계를 확인하고 수정 근거를 기록합니다. 마지막에는 실행 가능한 데이터 분석 미니 프로젝트를 완성합니다.
 
@@ -25,7 +25,7 @@
 | 운영 기간 | **2026년 9월 7일(월)~9월 11일(금)** |
 | 수업 시간 | 매일 **18:00~21:00** · 1일 3시간 |
 | 담당 교수 | 이영호 교수 · 국립목포대학교 컴퓨터학부 |
-| 선수 학습 | `AI활용프로그래밍` 이수 |
+| 선수 학습 | `AI활용프로그래밍` 이수 또는 Python 기초 문법 이해 |
 | 실습 환경 | Google Colab, GitHub, 생성형 AI |
 | 최종 결과물 | 실행 가능한 데이터 분석 Colab 노트북, README, AI 활용 기록 |
 
@@ -42,14 +42,15 @@
 
 ## 수업 일정
 
+각 일차는 3개의 강의 영상과 연결됩니다. YouTube에 영상을 올린 뒤 `DAY숫자_VIDEO숫자_ID`를 실제 영상 ID로 교체합니다.
 
 | 일차 | 날짜 | 1차시 영상 | 2차시 영상 | 3차시 영상 | 주요 실습·산출물 | 연계 자료 |
 |---:|---|---|---|---|---|---|
-| 1일차 | 9월 7일(월) | [▶ AI 협업 코딩과 Colab](https://youtu.be/DAY1_VIDEO1_ID) | [▶ 입력·계산·문자열](https://youtu.be/DAY1_VIDEO2_ID) | [▶ 조건문과 반복문](https://youtu.be/DAY1_VIDEO3_ID) | Colab 환경 점검, 입력·계산 프로그램, 조건·반복 문제 해결 | [1주차](../weeks/week01/README.md) · [2주차](../weeks/week02/README.md) · [3주차](../weeks/week03/README.md) |
-| 2일차 | 9월 8일(화) | [▶ 리스트·튜플·집합·딕셔너리](https://youtu.be/DAY2_VIDEO1_ID) | [▶ 함수·모듈·테스트](https://youtu.be/DAY2_VIDEO2_ID) | [▶ 파일·CSV·예외 처리](https://youtu.be/DAY2_VIDEO3_ID) | 학생 성적 데이터 구조화, 재사용 함수, 안전한 CSV 처리 | [4주차](../weeks/week04/README.md) · [5주차](../weeks/week05/README.md) · [6주차](../weeks/week06/README.md) |
-| 3일차 | 9월 9일(수) | [▶ 클래스와 객체지향 설계](https://youtu.be/DAY3_VIDEO1_ID) | [▶ NumPy와 배열 사고](https://youtu.be/DAY3_VIDEO2_ID) | [▶ pandas 데이터 탐색](https://youtu.be/DAY3_VIDEO3_ID) | 도서 대출 클래스, 배열 연산, CSV 데이터 기초 탐색 | [7주차](../weeks/week07/README.md) · [9주차](../weeks/week09/README.md) · [10주차](../weeks/week10/README.md) |
-| 4일차 | 9월 10일(목) | [▶ 데이터 정제·변환·집계](https://youtu.be/DAY4_VIDEO1_ID) | [▶ 탐색적 데이터 분석](https://youtu.be/DAY4_VIDEO2_ID) | [▶ matplotlib 시각화](https://youtu.be/DAY4_VIDEO3_ID) | 설문 데이터 정제, 분석 질문 설정, 차트와 해석 작성 | [11주차](../weeks/week11/README.md) · [12주차](../weeks/week12/README.md) · [13주차](../weeks/week13/README.md) |
-| 5일차 | 9월 11일(금) | [▶ AI 디버깅과 테스트](https://youtu.be/DAY5_VIDEO1_ID) | [▶ 코드 리팩토링과 재현성](https://youtu.be/DAY5_VIDEO2_ID) | [▶ 최종 프로젝트와 발표](https://youtu.be/DAY5_VIDEO3_ID) | 오류 진단, 코드 개선, 최종 노트북 완성 및 발표 | [14주차](../weeks/week14/README.md) |
+| 1일차 | 9월 7일(월) | [▶ AI 협업 코딩과 Colab](https://youtu.be/DAY1_VIDEO1_ID) | [▶ 입력·계산·문자열](https://youtu.be/DAY1_VIDEO2_ID) | [▶ 조건문과 반복문](https://youtu.be/DAY1_VIDEO3_ID) | Colab 환경 점검, 입력·계산 프로그램, 조건·반복 문제 해결 | [1주차 슬라이드](../weeks/week01/slides.md) · [2주차 슬라이드](../weeks/week02/slides.md) · [3주차 슬라이드](../weeks/week03/slides.md) |
+| 2일차 | 9월 8일(화) | [▶ 리스트·튜플·집합·딕셔너리](https://youtu.be/DAY2_VIDEO1_ID) | [▶ 함수·모듈·테스트](https://youtu.be/DAY2_VIDEO2_ID) | [▶ 파일·CSV·예외 처리](https://youtu.be/DAY2_VIDEO3_ID) | 학생 성적 데이터 구조화, 재사용 함수, 안전한 CSV 처리 | [4주차 슬라이드](../weeks/week04/slides.md) · [5주차 슬라이드](../weeks/week05/slides.md) · [6주차 슬라이드](../weeks/week06/slides.md) |
+| 3일차 | 9월 9일(수) | [▶ 클래스와 객체지향 설계](https://youtu.be/DAY3_VIDEO1_ID) | [▶ NumPy와 배열 사고](https://youtu.be/DAY3_VIDEO2_ID) | [▶ pandas 데이터 탐색](https://youtu.be/DAY3_VIDEO3_ID) | 도서 대출 클래스, 배열 연산, CSV 데이터 기초 탐색 | [7주차 슬라이드](../weeks/week07/slides.md) · [9주차 슬라이드](../weeks/week09/slides.md) · [10주차 슬라이드](../weeks/week10/slides.md) |
+| 4일차 | 9월 10일(목) | [▶ 데이터 정제·변환·집계](https://youtu.be/DAY4_VIDEO1_ID) | [▶ 탐색적 데이터 분석](https://youtu.be/DAY4_VIDEO2_ID) | [▶ matplotlib 시각화](https://youtu.be/DAY4_VIDEO3_ID) | 설문 데이터 정제, 분석 질문 설정, 차트와 해석 작성 | [11주차 슬라이드](../weeks/week11/slides.md) · [12주차 슬라이드](../weeks/week12/slides.md) · [13주차 슬라이드](../weeks/week13/slides.md) |
+| 5일차 | 9월 11일(금) | [▶ AI 디버깅과 테스트](https://youtu.be/DAY5_VIDEO1_ID) | [▶ 코드 리팩토링과 재현성](https://youtu.be/DAY5_VIDEO2_ID) | [▶ 최종 프로젝트와 발표](https://youtu.be/DAY5_VIDEO3_ID) | 오류 진단, 코드 개선, 최종 노트북 완성 및 발표 | [14주차 슬라이드](../weeks/week14/slides.md) · [15주차 슬라이드](../weeks/week15/slides.md) |
 
 <!-- 링크 교체 예시: https://youtu.be/DAY1_VIDEO1_ID → https://youtu.be/실제영상ID -->
 
@@ -69,20 +70,20 @@
 - 코드 셀만 나열하지 말고 문제, 방법, 실행 결과와 해석을 Markdown 셀에 설명합니다.
 - AI를 사용한 경우 프롬프트, 채택·거절한 제안, 직접 수정한 코드와 검증 결과를 기록합니다.
 - 개인정보, API 키, 타인의 코드나 과제를 AI와 GitHub에 입력하지 않습니다.
- <!-- - 제출 파일명은 `학번_이름_assignment01.ipynb`, `학번_이름_assignment02.ipynb`, `학번_이름_assignment03.ipynb` 형식을 사용합니다. -->
+- 제출 파일명은 `학번_이름_assignment01.ipynb`, `학번_이름_assignment02.ipynb`, `학번_이름_assignment03.ipynb` 형식을 사용합니다.
 
 ### Google Colab 과제 제출 방법
 
 과제 파일을 별도로 업로드하지 않고, 완성한 Google Colab 노트북을 담당 교수에게 공유하면 제출이 완료됩니다.
 
 1. Colab 메뉴에서 **파일 → Drive에 사본 저장**을 선택합니다.
-<!-- 2. 노트북 이름을 과제별 제출 형식에 맞게 변경합니다.
+2. 노트북 이름을 과제별 제출 형식에 맞게 변경합니다.
    - 과제 1: `학번_이름_assignment01.ipynb`
    - 과제 2: `학번_이름_assignment02.ipynb`
-   - 과제 3: `학번_이름_assignment03.ipynb` -->
-2. **런타임 → 런타임 다시 시작 및 모두 실행**을 선택하여 전체 코드와 출력 결과를 확인합니다.
+   - 과제 3: `학번_이름_assignment03.ipynb`
+3. **런타임 → 런타임 다시 시작 및 모두 실행**을 선택하여 전체 코드와 출력 결과를 확인합니다.
 4. Colab 오른쪽 위의 **공유** 버튼을 누릅니다.
-5. 사용자 추가란에 담당 교수 이메일 `youngho@ce.mokpo.ac.kr`을 입력합니다.
+5. 사용자 추가란에 담당 교수 이메일 **`youngho@ce.mokpo.ac.kr`**을 입력합니다.
 6. 권한을 **뷰어**로 설정하고 **알림 보내기**를 선택한 뒤 공유합니다.
 7. 공유 창의 사용자 목록에 `youngho@ce.mokpo.ac.kr`이 표시되는지 확인합니다.
 
@@ -103,33 +104,33 @@
 
 ### 1일차: Python 핵심 문법
 
-- [AI 협업 코딩과 Colab 시작](../weeks/week01/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week01/practice.ipynb)
-- [입력·계산·문자열](../weeks/week02/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week02/practice.ipynb)
-- [조건문과 반복문](../weeks/week03/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week03/practice.ipynb)
+- [AI 협업 코딩과 Colab 시작 슬라이드](../weeks/week01/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week01/practice.ipynb)
+- [입력·계산·문자열 슬라이드](../weeks/week02/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week02/practice.ipynb)
+- [조건문과 반복문 슬라이드](../weeks/week03/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week03/practice.ipynb)
 
 ### 2일차: 구조화된 Python 프로그램
 
-- [리스트·튜플·집합·딕셔너리](../weeks/week04/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week04/practice.ipynb)
-- [함수·모듈·테스트 가능한 코드](../weeks/week05/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week05/practice.ipynb)
-- [파일·CSV·예외 처리](../weeks/week06/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week06/practice.ipynb)
+- [리스트·튜플·집합·딕셔너리 슬라이드](../weeks/week04/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week04/practice.ipynb)
+- [함수·모듈·테스트 가능한 코드 슬라이드](../weeks/week05/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week05/practice.ipynb)
+- [파일·CSV·예외 처리 슬라이드](../weeks/week06/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week06/practice.ipynb)
 
 ### 3일차: 객체와 데이터 처리
 
-- [클래스와 객체지향 설계](../weeks/week07/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week07/practice.ipynb)
-- [NumPy와 배열 사고](../weeks/week09/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week09/practice.ipynb)
-- [pandas 데이터 불러오기·탐색](../weeks/week10/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/practice.ipynb)
+- [클래스와 객체지향 설계 슬라이드](../weeks/week07/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week07/practice.ipynb)
+- [NumPy와 배열 사고 슬라이드](../weeks/week09/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week09/practice.ipynb)
+- [pandas 데이터 불러오기·탐색 슬라이드](../weeks/week10/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/practice.ipynb)
 
 ### 4일차: 데이터 분석과 시각화
 
-- [데이터 정제·변환·집계](../weeks/week11/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week11/practice.ipynb)
-- [탐색적 데이터 분석·프로젝트 기획](../weeks/week12/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/practice.ipynb)
-- [matplotlib 데이터 시각화](../weeks/week13/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week13/practice.ipynb)
+- [데이터 정제·변환·집계 슬라이드](../weeks/week11/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week11/practice.ipynb)
+- [탐색적 데이터 분석·프로젝트 기획 슬라이드](../weeks/week12/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/practice.ipynb)
+- [matplotlib 데이터 시각화 슬라이드](../weeks/week13/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week13/practice.ipynb)
 
 ### 5일차: AI 코드 검증과 최종 프로젝트
 
-- [AI 디버깅·테스트·리팩토링](../weeks/week14/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week14/practice.ipynb)
-- [최종 프로젝트 발표와 재현성](../weeks/week15/README.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/practice.ipynb)
-- [최종 프로젝트 안내](../projects/final-project.md) · [평가 루브릭](../rubrics/final-project-rubric.md)
+- [AI 디버깅·테스트·리팩토링 슬라이드](../weeks/week14/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week14/practice.ipynb)
+- [최종 프로젝트 발표와 재현성 슬라이드](../weeks/week15/slides.md) · [Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/practice.ipynb)
+- [최종 프로젝트 안내](projects/final-project.md) · [평가 루브릭](rubrics/final-project-rubric.md)
 
 ## 실습 진행 방법
 
@@ -149,7 +150,7 @@
 | 9월 11일(금) 20:30 | [과제 3: AI 코드 디버깅·테스트·리팩토링](assignments/assignment03_ai_debugging_refactoring.md) | 결함 분석, 테스트, 수정 전후 비교와 리팩토링 포함 후 Colab 공유 |
 | 9월 11일(금) 21:00 | [과제 2: AI 활용 데이터 분석](assignments/assignment02_ai_data_analysis.md) | 전처리, 분석, 시각화, 결론, 재현성과 AI 검증 기록 포함 후 Colab 공유 |
 
-제출 시 [학생 제출 템플릿](../templates/student-submission-template.md)과 [AI 활용 기록지](../templates/ai-use-log.md)를 사용합니다.
+제출 시 [학생 제출 템플릿](templates/student-submission-template.md)과 [AI 활용 기록지](templates/ai-use-log.md)를 사용합니다.
 
 ## 평가 안내
 
@@ -169,10 +170,10 @@
 수업 전 다음 항목을 준비합니다.
 
 - Google 계정과 [Google Colab](https://colab.research.google.com/) 접속 확인
-- [GitHub](https://github.com/) 저장소 접속 확인
+- [GitHub](https://github.com/) 계정 준비 및 저장소 접속 확인
 - 생성형 AI 서비스 로그인 및 사용 가능 여부 확인
 - 개인 노트북 충전과 안정적인 인터넷 연결 확인
-- 저장소의 [1주차 안내](../weeks/week01/README.md) 읽기
+- 저장소의 [1주차 슬라이드](../weeks/week01/slides.md) 읽기
 
 대부분의 실습은 별도 설치 없이 Google Colab에서 실행할 수 있습니다. 로컬 환경을 사용할 경우 다음 명령으로 저장소를 내려받습니다.
 
@@ -197,22 +198,22 @@ python -m pip install -r requirements.txt
 
 | 파일 | 주요 활용 |
 |---|---|
-| [`scores.csv`](../datasets/scores.csv) | 성적 데이터 탐색·집계 |
-| [`expenses.csv`](../datasets/expenses.csv) | 지출 데이터 분류·분석·시각화 |
-| [`books.csv`](../datasets/books.csv) | 조건 검색·정렬·요약 |
-| [`survey.csv`](../datasets/survey.csv) | 결측치·중복·범주 정제 |
+| [`scores.csv`](datasets/scores.csv) | 성적 데이터 탐색·집계 |
+| [`expenses.csv`](datasets/expenses.csv) | 지출 데이터 분류·분석·시각화 |
+| [`books.csv`](datasets/books.csv) | 조건 검색·정렬·요약 |
+| [`survey.csv`](datasets/survey.csv) | 결측치·중복·범주 정제 |
 
-데이터는 수업을 위해 만든 가상 데이터입니다. 자세한 내용은 [데이터셋 안내](../datasets/README.md)를 확인합니다.
+데이터는 수업을 위해 만든 가상 데이터입니다. 자세한 내용은 [데이터셋 안내](datasets/README.md)를 확인합니다.
 
 ## 관련 문서
 
 - [과제 1: Python으로 만드는 성적 분석 프로그램](assignments/assignment01_python_problem_solving.md)
 - [과제 2: AI 활용 데이터 분석 미니 프로젝트](assignments/assignment02_ai_data_analysis.md)
 - [과제 3: AI 코드 디버깅·테스트·리팩토링 실기](assignments/assignment03_ai_debugging_refactoring.md)
-- [전체 15주 수업 운영계획](../course/15-week-plan.md)
-- [학습성과·평가계획](../course/outcomes-and-assessment.md)
-- [슬라이드–Colab 연계표](../course/slide-notebook-map.md)
-- [교수자 운영 가이드](../instructor/operation-guide.md)
+- [전체 15주 수업 운영계획](course/15-week-plan.md)
+- [학습성과·평가계획](course/outcomes-and-assessment.md)
+- [슬라이드–Colab 연계표](course/slide-notebook-map.md)
+- [교수자 운영 가이드](instructor/operation-guide.md)
 
 ---
 
