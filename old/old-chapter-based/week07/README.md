@@ -1,6 +1,6 @@
 # Week 7. Class와 객체지향 프로그래밍 기초
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/week07/practice.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/week07/practice.ipynb)
 
 ---
 

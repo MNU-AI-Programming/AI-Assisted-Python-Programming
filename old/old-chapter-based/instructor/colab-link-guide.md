@@ -7,7 +7,7 @@
 예:
 
 ```text
-https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter01/practice.ipynb
+https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter01/practice.ipynb
 ```
 
 GitHub에 업로드한 후 `MNU-AI-Programming`를 `MNU-AI-Programming`로 바꾸면 됩니다.

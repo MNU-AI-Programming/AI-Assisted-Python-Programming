@@ -3,7 +3,7 @@
 
 - 목표 영상 길이: 26분 30초
 - 최소 조건: 25분 이상
-- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/weeks/week15
+- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/old/weeks/week15
 - 실습: 최종 노트북 점검과 5분 발표 리허설
 - 최종 산출물: 최종 Colab, README, 발표자료, AI 활용·성찰 보고서
 

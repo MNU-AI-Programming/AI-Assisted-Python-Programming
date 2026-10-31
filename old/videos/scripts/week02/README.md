@@ -3,7 +3,7 @@
 
 - 목표 영상 길이: 26분 30초
 - 최소 조건: 25분 이상
-- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/weeks/week02
+- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/old/weeks/week02
 - 실습: 여행 경비 계산기
 - 최종 산출물: 입력과 계산을 분리한 생활 문제 계산기
 

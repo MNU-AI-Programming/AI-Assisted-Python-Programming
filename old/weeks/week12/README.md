@@ -1,6 +1,6 @@
 # Week 12. 탐색적 데이터 분석과 프로젝트 기획
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/practice.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/practice.ipynb)
 
 ## 학습 목표
 

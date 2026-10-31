@@ -3,7 +3,7 @@
 
 - 목표 영상 길이: 26분 30초
 - 최소 조건: 25분 이상
-- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/weeks/week05
+- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/old/weeks/week05
 - 실습: 재사용 가능한 성적 계산 함수
 - 최종 산출물: 입력·처리·출력을 분리한 함수 모음
 

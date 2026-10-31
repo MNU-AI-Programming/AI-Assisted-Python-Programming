@@ -14,29 +14,29 @@
 
 ## Google Colab 바로 열기
 
-- [Chapter 1 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter01/practice.ipynb)
-- [Chapter 2 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter02/practice.ipynb)
-- [Chapter 3 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter03/practice.ipynb)
-- [Chapter 4 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter04/practice.ipynb)
-- [Chapter 5 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter05/practice.ipynb)
-- [Chapter 6 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter06/practice.ipynb)
-- [Chapter 7 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter07/practice.ipynb)
-- [Chapter 8 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter08/practice.ipynb)
+- [Chapter 1 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter01/practice.ipynb)
+- [Chapter 2 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter02/practice.ipynb)
+- [Chapter 3 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter03/practice.ipynb)
+- [Chapter 4 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter04/practice.ipynb)
+- [Chapter 5 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter05/practice.ipynb)
+- [Chapter 6 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter06/practice.ipynb)
+- [Chapter 7 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter07/practice.ipynb)
+- [Chapter 8 Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter08/practice.ipynb)
 
 
 ---
 
 ## Chapter 1. 생성형 AI와 AI 활용 코딩
 
-- [1.1 AI란 무엇인가?](chapter01/README.md#11-ai란-무엇인가)
-- [1.2 생성형 AI란?](chapter01/README.md#12-생성형-ai란)
-- [1.3 AI와 함께 코딩하는 시대](chapter01/README.md#13-ai와-함께-코딩하는-시대)
-- [1.4 ChatGPT 시작하기](chapter01/README.md#14-chatgpt-시작하기)
-- [1.5 좋은 Prompt 작성법](chapter01/README.md#15-좋은-prompt-작성법)
-- [1.6 Google Colab 시작하기](chapter01/README.md#16-google-colab-시작하기)
-- [1.7 첫 번째 Python 프로그램](chapter01/README.md#17-첫-번째-python-프로그램)
-- [1.8 AI가 만든 코드 이해하기](chapter01/README.md#18-ai가-만든-코드-이해하기)
-- [1.9 Chapter 1 요약](chapter01/README.md#19-chapter-1-요약)
+- [1.1 AI란 무엇인가?](chapter01/readme.md#11-ai란-무엇인가)
+- [1.2 생성형 AI란?](chapter01/readme.md#12-생성형-ai란)
+- [1.3 AI와 함께 코딩하는 시대](chapter01/readme.md#13-ai와-함께-코딩하는-시대)
+- [1.4 ChatGPT 시작하기](chapter01/readme.md#14-chatgpt-시작하기)
+- [1.5 좋은 Prompt 작성법](chapter01/readme.md#15-좋은-prompt-작성법)
+- [1.6 Google Colab 시작하기](chapter01/readme.md#16-google-colab-시작하기)
+- [1.7 첫 번째 Python 프로그램](chapter01/readme.md#17-첫-번째-python-프로그램)
+- [1.8 AI가 만든 코드 이해하기](chapter01/readme.md#18-ai가-만든-코드-이해하기)
+- [1.9 Chapter 1 요약](chapter01/readme.md#19-chapter-1-요약)
 - [실습 노트북](chapter01/practice.ipynb)
 - [슬라이드](chapter01/slides.md)
 - [과제](chapter01/assignment.md)

@@ -3,7 +3,7 @@
 
 - 목표 영상 길이: 26분 30초
 - 최소 조건: 25분 이상
-- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/weeks/week06
+- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/old/weeks/week06
 - 실습: CSV 성적 파일 읽기와 검증
 - 최종 산출물: 오류에 견고한 CSV 처리 프로그램
 

@@ -3,7 +3,7 @@
 
 - 목표 영상 길이: 26분 30초
 - 최소 조건: 25분 이상
-- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/weeks/week09
+- GitHub 원본: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/old/weeks/week09
 - 실습: 센서 데이터의 빠른 요약
 - 최종 산출물: 배열 기반 기초 통계와 이상값 탐지
 

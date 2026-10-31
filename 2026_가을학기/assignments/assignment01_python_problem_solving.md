@@ -12,7 +12,7 @@
 | 제출 마감 | **2026년 9월 9일(수) 21:00** |
 | 배점 | 25점(교과목 총점 기준) |
 | 작업 환경 | Google Colab |
-| 사용 데이터 | [`datasets/scores.csv`](../datasets/scores.csv) |
+| 사용 데이터 | [`old/datasets/scores.csv`](../../old/datasets/scores.csv) |
 | 노트북 이름 | `학번_이름_assignment01.ipynb` |
 | 제출 방법 | Google Colab에서 `youngho@ce.mokpo.ac.kr`에 **뷰어** 권한으로 공유 |
 

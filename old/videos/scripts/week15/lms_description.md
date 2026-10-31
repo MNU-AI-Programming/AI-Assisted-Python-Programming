@@ -13,11 +13,11 @@
 
 > **최종 Colab, README, 발표자료, AI 활용·성찰 보고서**
 
-- 주차 안내: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/README.md
-- 슬라이드: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/slides.md
-- Colab: https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/practice.ipynb
-- 과제: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/assignment.md
-- 퀴즈: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/quiz.md
+- 주차 안내: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week15/README.md
+- 슬라이드: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week15/slides.md
+- Colab: https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week15/practice.ipynb
+- 과제: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week15/assignment.md
+- 퀴즈: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week15/quiz.md
 
 AI가 생성한 코드는 초안입니다. 직접 실행·검증·수정하고 Prompt와 수정 근거를 기록하세요.
 

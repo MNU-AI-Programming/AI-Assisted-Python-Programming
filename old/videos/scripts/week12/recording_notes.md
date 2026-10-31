@@ -3,11 +3,11 @@
 
 ## 촬영 전 열어 둘 탭
 
-1. [Week README](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/README.md)
-2. [Marp 슬라이드](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/slides.md)
-3. [Colab 실습](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/practice.ipynb)
-4. [과제](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/assignment.md)
-5. [퀴즈](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/quiz.md)
+1. [Week README](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/README.md)
+2. [Marp 슬라이드](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/slides.md)
+3. [Colab 실습](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/practice.ipynb)
+4. [과제](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/assignment.md)
+5. [퀴즈](https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/quiz.md)
 6. 사용할 생성형 AI 대화창
 
 ## 타임라인
