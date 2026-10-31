@@ -1,6 +1,6 @@
 # Week 10. pandas 기초: Series와 DataFrame
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/week10/practice.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/week10/practice.ipynb)
 
 ---
 
@@ -48,7 +48,7 @@ shape·columns·dtypes로 구조를 확인합니다.
 
 ```python
 import pandas as pd
-url="https://raw.githubusercontent.com/MNU-AI-Programming/AI-Assisted-Python-Programming/main/datasets/scores.csv"
+url="https://raw.githubusercontent.com/MNU-AI-Programming/AI-Assisted-Python-Programming/main/old/datasets/scores.csv"
 df=pd.read_csv(url)
 display(df.head())
 print(df.shape)

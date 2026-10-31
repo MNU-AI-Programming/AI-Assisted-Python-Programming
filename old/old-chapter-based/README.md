@@ -208,14 +208,14 @@ GitHub에 저장소를 업로드한 뒤, 아래 링크의 `MNU-AI-Programming`�
 
 | Chapter | 주제 | Colab |
 |---|---|---|
-| Chapter 1 | 생성형 AI와 AI 활용 코딩 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter01/practice.ipynb) |
-| Chapter 2 | Python 시작하기 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter02/practice.ipynb) |
-| Chapter 3 | 입력과 계산 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter03/practice.ipynb) |
-| Chapter 4 | 조건문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter04/practice.ipynb) |
-| Chapter 5 | 반복문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter05/practice.ipynb) |
-| Chapter 6 | 함수와 AI 활용 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter06/practice.ipynb) |
-| Chapter 7 | 리스트와 파일 처리 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter07/practice.ipynb) |
-| Chapter 8 | AI 활용 프로젝트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/chapter08/practice.ipynb) |
+| Chapter 1 | 생성형 AI와 AI 활용 코딩 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter01/practice.ipynb) |
+| Chapter 2 | Python 시작하기 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter02/practice.ipynb) |
+| Chapter 3 | 입력과 계산 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter03/practice.ipynb) |
+| Chapter 4 | 조건문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter04/practice.ipynb) |
+| Chapter 5 | 반복문 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter05/practice.ipynb) |
+| Chapter 6 | 함수와 AI 활용 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter06/practice.ipynb) |
+| Chapter 7 | 리스트와 파일 처리 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter07/practice.ipynb) |
+| Chapter 8 | AI 활용 프로젝트 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/old-chapter-based/chapter08/practice.ipynb) |
 
 ---
 
@@ -230,7 +230,7 @@ https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming
 Chapter 1 예시 주소:
 
 ```text
-https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/chapter01
+https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/old/old-chapter-based/chapter01
 ```
 
 ## 🚀 빠른 시작

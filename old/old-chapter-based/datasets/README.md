@@ -12,6 +12,6 @@
 
 ```python
 import pandas as pd
-url = "https://raw.githubusercontent.com/MNU-AI-Programming/AI-Assisted-Python-Programming/main/datasets/scores.csv"
+url = "https://raw.githubusercontent.com/MNU-AI-Programming/AI-Assisted-Python-Programming/main/old/datasets/scores.csv"
 df = pd.read_csv(url)
 ```

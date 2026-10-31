@@ -6,10 +6,10 @@
 | 교수자 | 이영호 교수 · 국립목포대학교 컴퓨터학부 |
 | 영상 구성 | 한 주에 영상 1개 |
 | 목표 길이 | 26분 30초 |
-| GitHub 폴더 | https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/weeks/week01 |
-| Colab | https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week01/practice.ipynb |
-| 과제 | https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week01/assignment.md |
-| 퀴즈 | https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week01/quiz.md |
+| GitHub 폴더 | https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/tree/main/old/weeks/week01 |
+| Colab | https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week01/practice.ipynb |
+| 과제 | https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week01/assignment.md |
+| 퀴즈 | https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week01/quiz.md |
 
 ## 녹화 목표
 

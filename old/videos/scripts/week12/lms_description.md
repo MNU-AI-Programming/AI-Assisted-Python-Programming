@@ -13,11 +13,11 @@
 
 > **최종 프로젝트 제안서와 EDA 노트북**
 
-- 주차 안내: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/README.md
-- 슬라이드: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/slides.md
-- Colab: https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/practice.ipynb
-- 과제: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/assignment.md
-- 퀴즈: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/quiz.md
+- 주차 안내: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/README.md
+- 슬라이드: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/slides.md
+- Colab: https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/practice.ipynb
+- 과제: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/assignment.md
+- 퀴즈: https://github.com/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/quiz.md
 
 AI가 생성한 코드는 초안입니다. 직접 실행·검증·수정하고 Prompt와 수정 근거를 기록하세요.
 

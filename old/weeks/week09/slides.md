@@ -33,7 +33,7 @@ style: |
 | Level 3 적용하기 | 11~12 | 도전 코드 셀 | 정상·경계 사례 테스트 |
 | Level 4 확장하기 | 13~15 | 확장 코드 셀 | 기능 설계·AI 기록 |
 
-[이번 주 Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week09/practice.ipynb)
+[이번 주 Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week09/practice.ipynb)
 
 ---
 

@@ -59,21 +59,21 @@
 
 | 주차 | 핵심 주제 | 수업자료 | Colab | 과제·퀴즈 |
 |---:|---|---|---|---|
-| 1 | AI 협업 코딩과 Colab 시작 | [안내](weeks/week01/README.md) · [슬라이드](weeks/week01/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week01/practice.ipynb) | [과제](weeks/week01/assignment.md) · [퀴즈](weeks/week01/quiz.md) |
-| 2 | 입력·계산·문자열 | [안내](weeks/week02/README.md) · [슬라이드](weeks/week02/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week02/practice.ipynb) | [과제](weeks/week02/assignment.md) · [퀴즈](weeks/week02/quiz.md) |
-| 3 | 조건문과 반복문 | [안내](weeks/week03/README.md) · [슬라이드](weeks/week03/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week03/practice.ipynb) | [과제](weeks/week03/assignment.md) · [퀴즈](weeks/week03/quiz.md) |
-| 4 | 리스트·튜플·집합·딕셔너리 | [안내](weeks/week04/README.md) · [슬라이드](weeks/week04/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week04/practice.ipynb) | [과제](weeks/week04/assignment.md) · [퀴즈](weeks/week04/quiz.md) |
-| 5 | 함수·모듈·테스트 가능한 코드 | [안내](weeks/week05/README.md) · [슬라이드](weeks/week05/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week05/practice.ipynb) | [과제](weeks/week05/assignment.md) · [퀴즈](weeks/week05/quiz.md) |
-| 6 | 파일·CSV·예외 처리 | [안내](weeks/week06/README.md) · [슬라이드](weeks/week06/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week06/practice.ipynb) | [과제](weeks/week06/assignment.md) · [퀴즈](weeks/week06/quiz.md) |
-| 7 | 클래스와 객체지향 설계 | [안내](weeks/week07/README.md) · [슬라이드](weeks/week07/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week07/practice.ipynb) | [과제](weeks/week07/assignment.md) · [퀴즈](weeks/week07/quiz.md) |
-| 8 | 중간 실기: Python 문제 해결 | [안내](weeks/week08/README.md) · [슬라이드](weeks/week08/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week08/practice.ipynb) | [과제](weeks/week08/assignment.md) · [퀴즈](weeks/week08/quiz.md) |
-| 9 | NumPy와 배열 사고 | [안내](weeks/week09/README.md) · [슬라이드](weeks/week09/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week09/practice.ipynb) | [과제](weeks/week09/assignment.md) · [퀴즈](weeks/week09/quiz.md) |
-| 10 | pandas 데이터 불러오기·탐색 | [안내](weeks/week10/README.md) · [슬라이드](weeks/week10/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/practice.ipynb) | [과제](weeks/week10/assignment.md) · [퀴즈](weeks/week10/quiz.md) |
-| 11 | 데이터 정제·변환·집계 | [안내](weeks/week11/README.md) · [슬라이드](weeks/week11/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week11/practice.ipynb) | [과제](weeks/week11/assignment.md) · [퀴즈](weeks/week11/quiz.md) |
-| 12 | 탐색적 데이터 분석·프로젝트 기획 | [안내](weeks/week12/README.md) · [슬라이드](weeks/week12/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week12/practice.ipynb) | [과제](weeks/week12/assignment.md) · [퀴즈](weeks/week12/quiz.md) |
-| 13 | matplotlib 데이터 시각화 | [안내](weeks/week13/README.md) · [슬라이드](weeks/week13/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week13/practice.ipynb) | [과제](weeks/week13/assignment.md) · [퀴즈](weeks/week13/quiz.md) |
-| 14 | AI 디버깅·테스트·리팩토링 | [안내](weeks/week14/README.md) · [슬라이드](weeks/week14/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week14/practice.ipynb) | [과제](weeks/week14/assignment.md) · [퀴즈](weeks/week14/quiz.md) |
-| 15 | 최종 프로젝트 발표와 재현성 | [안내](weeks/week15/README.md) · [슬라이드](weeks/week15/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week15/practice.ipynb) | [과제](weeks/week15/assignment.md) · [퀴즈](weeks/week15/quiz.md) |
+| 1 | AI 협업 코딩과 Colab 시작 | [안내](weeks/week01/README.md) · [슬라이드](weeks/week01/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week01/practice.ipynb) | [과제](weeks/week01/assignment.md) · [퀴즈](weeks/week01/quiz.md) |
+| 2 | 입력·계산·문자열 | [안내](weeks/week02/README.md) · [슬라이드](weeks/week02/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week02/practice.ipynb) | [과제](weeks/week02/assignment.md) · [퀴즈](weeks/week02/quiz.md) |
+| 3 | 조건문과 반복문 | [안내](weeks/week03/README.md) · [슬라이드](weeks/week03/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week03/practice.ipynb) | [과제](weeks/week03/assignment.md) · [퀴즈](weeks/week03/quiz.md) |
+| 4 | 리스트·튜플·집합·딕셔너리 | [안내](weeks/week04/README.md) · [슬라이드](weeks/week04/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week04/practice.ipynb) | [과제](weeks/week04/assignment.md) · [퀴즈](weeks/week04/quiz.md) |
+| 5 | 함수·모듈·테스트 가능한 코드 | [안내](weeks/week05/README.md) · [슬라이드](weeks/week05/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week05/practice.ipynb) | [과제](weeks/week05/assignment.md) · [퀴즈](weeks/week05/quiz.md) |
+| 6 | 파일·CSV·예외 처리 | [안내](weeks/week06/README.md) · [슬라이드](weeks/week06/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week06/practice.ipynb) | [과제](weeks/week06/assignment.md) · [퀴즈](weeks/week06/quiz.md) |
+| 7 | 클래스와 객체지향 설계 | [안내](weeks/week07/README.md) · [슬라이드](weeks/week07/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week07/practice.ipynb) | [과제](weeks/week07/assignment.md) · [퀴즈](weeks/week07/quiz.md) |
+| 8 | 중간 실기: Python 문제 해결 | [안내](weeks/week08/README.md) · [슬라이드](weeks/week08/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week08/practice.ipynb) | [과제](weeks/week08/assignment.md) · [퀴즈](weeks/week08/quiz.md) |
+| 9 | NumPy와 배열 사고 | [안내](weeks/week09/README.md) · [슬라이드](weeks/week09/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week09/practice.ipynb) | [과제](weeks/week09/assignment.md) · [퀴즈](weeks/week09/quiz.md) |
+| 10 | pandas 데이터 불러오기·탐색 | [안내](weeks/week10/README.md) · [슬라이드](weeks/week10/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week10/practice.ipynb) | [과제](weeks/week10/assignment.md) · [퀴즈](weeks/week10/quiz.md) |
+| 11 | 데이터 정제·변환·집계 | [안내](weeks/week11/README.md) · [슬라이드](weeks/week11/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week11/practice.ipynb) | [과제](weeks/week11/assignment.md) · [퀴즈](weeks/week11/quiz.md) |
+| 12 | 탐색적 데이터 분석·프로젝트 기획 | [안내](weeks/week12/README.md) · [슬라이드](weeks/week12/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week12/practice.ipynb) | [과제](weeks/week12/assignment.md) · [퀴즈](weeks/week12/quiz.md) |
+| 13 | matplotlib 데이터 시각화 | [안내](weeks/week13/README.md) · [슬라이드](weeks/week13/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week13/practice.ipynb) | [과제](weeks/week13/assignment.md) · [퀴즈](weeks/week13/quiz.md) |
+| 14 | AI 디버깅·테스트·리팩토링 | [안내](weeks/week14/README.md) · [슬라이드](weeks/week14/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week14/practice.ipynb) | [과제](weeks/week14/assignment.md) · [퀴즈](weeks/week14/quiz.md) |
+| 15 | 최종 프로젝트 발표와 재현성 | [안내](weeks/week15/README.md) · [슬라이드](weeks/week15/slides.md) | [실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/old/weeks/week15/practice.ipynb) | [과제](weeks/week15/assignment.md) · [퀴즈](weeks/week15/quiz.md) |
 
 각 주차 슬라이드에는 개념 이해를 돕는 SVG 순서도가 포함되어 있으며, 원본은 [`assets/diagrams`](assets/diagrams/)에서 확인할 수 있습니다.
 
@@ -147,8 +147,8 @@ python scripts/validate_package.py --execute
 
 ## 기존 자료와 여름학기 자료
 
-- 개편 이전의 Chapter 기반 강의자료는 [`old/`](old/)에 보존되어 있습니다.
-- 2026년 여름학기 공지와 과제는 [`2026_여름학기/`](2026_여름학기/)에서 확인할 수 있습니다.
+- 개편 이전의 Chapter 기반 강의자료는 [`old-chapter-based/`](old-chapter-based/)에 보존되어 있습니다.
+- 2026년 여름학기 공지와 과제는 [`2026_여름학기/`](../2026_여름학기/)에서 확인할 수 있습니다.
 - 현재 정규학기 수업은 루트의 `course/`, `weeks/`, `projects/` 자료를 기준으로 운영합니다.
 
 ## 라이선스 및 이용
