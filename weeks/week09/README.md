@@ -4,44 +4,57 @@
 
 ## 학습 목표
 
-- ndarray, shape, dtype, 벡터 연산, 불리언 인덱싱, 통계의 핵심 개념을 적용한다.
-- `센서 데이터의 빠른 요약` 실습을 완성한다.
-- AI가 생성·제안한 코드를 실행, 검증, 수정하고 그 근거를 기록한다.
+- 반복문 대신 배열 전체에 연산하는 벡터화와 브로드캐스팅을 이해하고 활용한다.
+- 인덱싱·슬라이싱·불리언 마스크·`np.where`/`np.select`로 원하는 값을 고른다.
+- `axis`를 정확히 지정해 행/열 방향으로 집계하고, `nan` 함수와 보간으로 결측값을 다룬다.
+- 1년치 기온 데이터를 월별 요약·이동평균·잔차 z-점수로 분석하고, AI 코드의 axis 혼동을 shape와 작은 예제로 검증한다.
 
-## 2시간 기본 운영
+## 이번 주 실습과 산출물
+
+- **핵심 실습**: 1년치 기온 데이터 분석 (`weather_daily.csv`)
+- **산출물**: 배열 기반 기초 통계, 월별 요약, 이동평균과 이상값 탐지
+
+## 2시간 수업 흐름
 
 | 구간 | 시간 | 활동 |
 |---|---:|---|
-| 도입·개념 | 20분 | 선수 지식 확인, 핵심 개념, 시범 |
-| 안내 실습 | 45분 | `practice.ipynb` 핵심 예제 |
-| 독립 실습 | 35분 | 도전 실습과 개인화 |
-| 공유·점검 | 20분 | 오류 사례 공유, 퀴즈, 제출 확인 |
-
-> 3시간 수업에서는 `assignment.md`의 확장 요구사항과 동료 코드 리뷰를 50분 추가하고, 중간 휴식 10분을 둡니다.
+| 도입·개념 | 20분 | 리스트 vs 배열, shape, 브로드캐스팅, axis |
+| 안내 실습 | 45분 | 생성·연산·인덱싱·마스크·집계·NaN |
+| 독립·짝 실습 | 35분 | 기온 데이터 월별 요약, 이동평균, 이상값 탐지 |
+| 공유·점검 | 20분 | axis 혼동 사례와 검증 방법 공유, 과제 안내 |
 
 ## 이번 주 파일
 
-- `practice.ipynb`: 실행 가능한 Colab 실습
-- `slides.md`: 개념 순서도와 Colab 실습을 포함한 Marp용 15장 슬라이드
-- `assignment.md`: 과제와 10점 루브릭
-- `quiz.md`: 형성평가 5문항
+| 파일 | 설명 | 바로 열기 |
+|---|---|---|
+| [`slides.md`](slides.md) | Marp 강의 슬라이드 | [PDF](slides.pdf) |
+| [`practice.ipynb`](practice.ipynb) | 수업 시간 실습 노트북 | [Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week09/practice.ipynb) |
+| [`assignment.ipynb`](assignment.ipynb) | 과제 노트북(자동 확인 포함) | [Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week09/assignment.ipynb) |
+| [`assignment.md`](assignment.md) | 과제 안내와 채점 기준 | |
 
 ## 슬라이드–노트북 연결
 
-| 슬라이드 | Colab 실습 | 학생 활동 |
+| 슬라이드 | 노트북 구간 | 학생 활동 |
 |---|---|---|
-| 5장 | 개념 순서도 | 이번 주 코드 흐름 시각화 |
-| 6~8장 | Level 1 따라하기 | 예상 → 실행 → 값 한 곳 변경 |
-| 9~10장 | Level 2 바꾸기 | 값·조건 두 곳 변경과 결과 설명 |
-| 11~12장 | Level 3 적용하기 | 정상·경계 사례 테스트 |
-| 13~15장 | Level 4·제출 점검 | 기능 확장과 AI 활용 기록 |
+| 5 | 1. 왜 NumPy인가? | 리스트와 배열 속도·연산 비교 |
+| 6~8 | 2. 배열 만들기와 연산 | 생성, 2차원 배열, 브로드캐스팅 |
+| 9~11 | 3. 인덱싱과 마스크 | [행, 열], 마스크, where·select |
+| 12~14 | 4. 집계와 axis, NaN | axis 예상하기, nan 함수 |
+| 15 | 5. Level 2 바꾸기 | 가중치·조건·argmin 바꾸기 |
+| 16~19 | 6. Level 3 기온 데이터 | genfromtxt, 월별 요약, 보간·이동평균, 잔차 z-점수 |
+| 20~22 | 7. Level 4 axis 혼동 | shape 확인과 손계산 예제 |
 
-## 산출물
+## 사용하는 데이터
 
-**배열 기반 기초 통계와 이상값 탐지**
+- [`weather_daily.csv`](../../datasets/weather_daily.csv)
 
-## 교수자 준비
+## 과제 (10점)
 
-- 수업 전에 노트북을 `런타임 다시 시작 후 모두 실행`으로 점검합니다.
-- 데이터 파일을 쓰는 주차는 `datasets/` 경로를 확인합니다.
-- 학생에게 정답보다 실행 증거와 수정 이유를 요구합니다.
+| 문제 | 내용 | 배점 |
+|---|---|---:|
+| 1 | 점수 행렬 요약 | 2 |
+| 2 | 정규화 두 가지 | 2 |
+| 3 | IQR 이상값 탐지 | 3 |
+| 4 | 이동평균과 연속 상승 (AI 협업) | 3 |
+
+자세한 내용은 [과제 안내](assignment.md)를 확인하세요.

@@ -3,183 +3,343 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
+header: "AI활용코딩연습 · Week 10"
+footer: "국립목포대학교 컴퓨터학부 · 이영호"
 style: |
-  section { font-size: 27px; }
-  code { font-size: 0.64em; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+  section { font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; font-size: 25px; padding: 56px 64px; color: #1d2733; }
+  h1 { color: #1f4e79; font-size: 1.45em; border-bottom: 3px solid #d6e4f2; padding-bottom: 6px; }
+  h2 { color: #2e75b6; font-size: 1.1em; }
+  strong { color: #c0392b; }
+  code { font-size: 0.86em; }
+  pre { font-size: 0.74em; line-height: 1.35; }
+  table { font-size: 0.78em; }
+  blockquote { border-left: 6px solid #2e75b6; background: #eef4fb; padding: 8px 18px; color: #1d2733; font-size: 0.92em; }
+  header, footer { color: #8a99a8; font-size: 0.55em; }
+  section.lead { justify-content: center; text-align: center; }
+  section.lead h1 { font-size: 2.1em; border: none; }
+  section.lead h2 { font-size: 1.3em; color: #2e75b6; }
 ---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
 
 # Week 10
 ## pandas로 데이터 불러오기와 탐색
 
-이영호 교수 | 국립목포대학교 컴퓨터학부
+AI활용코딩연습(ZBE135)
+이영호 교수 · 국립목포대학교 컴퓨터학부
 
 ---
 
-# 오늘의 목표와 산출물
-
-- 핵심 개념: Series, DataFrame, read_csv, head, info, describe, loc/iloc, 필터
-- 실습: **성적 데이터 탐색**
-- 산출물: **데이터 구조·품질·기초통계 탐색 보고**
-
----
-
-# Colab 실습 지도
-
-| 단계 | 슬라이드 | 노트북 | 학생 활동 |
-|---|---:|---|---|
-| 개념 그림 | 5 | 흐름 안내 | 코드가 처리되는 순서 설명 |
-| Level 1 따라하기 | 6~8 | 첫 코드 셀 | 예상 → 실행 → 한 곳 변경 |
-| Level 2 바꾸기 | 9~10 | 핵심 코드 셀 | 값·조건 두 곳 변경 |
-| Level 3 적용하기 | 11~12 | 도전 코드 셀 | 정상·경계 사례 테스트 |
-| Level 4 확장하기 | 13~15 | 확장 코드 셀 | 기능 설계·AI 기록 |
-
-[이번 주 Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/practice.ipynb)
-
----
-
-# 핵심 개념 연결
-
-- Series
-- DataFrame
-- read_csv
-- head
-- info
-- describe
-- loc/iloc
-- 필터
-
----
-
-# 개념 순서도
-
-![pandas 데이터 탐색 흐름](../../assets/diagrams/week10-flow.svg)
-
----
-
-# Level 1 — 먼저 예측하기
-
-## 가장 쉬운 코드부터 시작합니다
-
-1. 코드를 아직 실행하지 않습니다.
-2. 각 줄의 역할과 출력 결과를 예상합니다.
-3. 예상 내용을 옆 학생에게 한 문장으로 설명합니다.
-
----
-
-# Level 1 — 따라하기
+# 지난주 돌아보기
 
 ```python
-import pandas as pd
-
-df = pd.DataFrame({
-    "name": ["민수", "서연"],
-    "score": [88, 94],
-})
-print(df)
+scores.mean(axis=1)               # 학생별 (행마다)
+total[total >= 80]                # 마스크
+np.nanmean(avg_t)                 # 결측 무시
+np.where(total >= 70, "통과", "재수강")
 ```
 
-**실행 전 질문:** 어떤 값이 출력될까요?
+NumPy는 빠르지만 **열 이름이 없고 한 가지 자료형**만 → 표 데이터에는 **pandas**
 
 ---
 
-# Level 1 — 한 곳만 바꾸기
+# 오늘의 목표
 
-1. 숫자 또는 문자열 **한 곳**을 찾습니다.
-2. 값을 바꾸면 어떤 출력이 나올지 먼저 적습니다.
-3. Colab에서 실행하여 예상과 비교합니다.
-
-> 설명 문장: “___을 ___로 바꾸었기 때문에 결과가 ___로 달라졌다.”
+1. `Series`와 `DataFrame`의 구조를 이해한다
+2. `read_csv` → `head` · `info` · `describe` · `value_counts`로 **구조와 품질** 탐색
+3. 열 선택, `loc` / `iloc`, **조건 필터**, 정렬, 새 열
+4. 8주차 중간 실기를 **pandas로 다시** 하고 결과를 대조한다
+5. AI 코드의 **`and` 오류**와 **체인 인덱싱** 문제를 찾는다
 
 ---
 
-# Level 2 — 핵심 코드 읽기
+# 수업 흐름
+
+| 구간 | 시간 | 활동 |
+|---|---:|---|
+| 도입 · 개념 | 20분 | DataFrame 구조, 탐색 순서 |
+| 안내 실습 | 45분 | 읽기 · 탐색 · 선택 · 필터 · 정렬 · 새 열 |
+| 독립 · 짝 실습 | 35분 | 성적 데이터 탐색 보고 (질문 5개) |
+| 공유 · 점검 | 20분 | pandas 함정 2가지, 과제 안내 |
+
+[이번 주 Colab 실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/practice.ipynb)
+
+---
+
+# Series와 DataFrame
+
+| 구조 | 비유 | 구성 |
+|---|---|---|
+| `Series` | 이름표 붙은 1차원 배열 | 값 + **인덱스** |
+| `DataFrame` | 엑셀 시트 | 같은 인덱스를 공유하는 **열(Series)들** |
 
 ```python
-from pathlib import Path
-import pandas as pd
+s = pd.Series([78, 92, 65], index=["김민준", "이서연", "박지호"])
+s["이서연"], s.mean(), s[s >= 70]
 
-def find_data(name):
-    for candidate in [Path("../../datasets") / name, Path("../datasets") / name, Path("datasets") / name]:
-        if candidate.exists():
-            return candidate
-    raise FileNotFoundError(name)
-
-df = pd.read_csv(find_data("scores.csv"))
-print(df.head())
-print(df.groupby("major")["score"].mean().round(1))
-high = df.loc[df["score"] >= 85, ["name", "major", "score"]]
-print(high)
-assert set(["name", "major", "score"]).issubset(df.columns)
+df = pd.DataFrame({"name": [...], "midterm": [...], "final": [...]})
+df.shape, df.columns, df.dtypes
 ```
 
-코드의 **입력 → 처리 → 출력** 부분을 각각 표시하세요.
-
 ---
 
-# Level 2 — 두 곳 바꾸기
-
-- 입력값·조건·데이터 중 한 곳을 변경합니다.
-- 계산·함수·집계 방식 중 한 곳을 변경합니다.
-- 변경 전후 결과를 표로 기록합니다.
-
-| 구분 | 변경 전 | 변경 후 | 달라진 이유 |
-|---|---|---|---|
-| 실행 결과 |  |  |  |
-
----
-
-# Level 3 — 문제에 적용하기
+# 데이터 읽기
 
 ```python
-summary = df["score"].describe()
-print(summary)
-assert summary["min"] >= 0 and summary["max"] <= 100
+df = pd.read_csv("students.csv", dtype={"student_id": str})
 ```
 
-노트북의 전체 코드를 실행하고 요구사항과 연결하세요.
+- 학번 · 전화번호 · 우편번호처럼 **계산하지 않는 숫자**는 문자열로
+- 그렇지 않으면 `"01012345678"` → `1012345678` (앞자리 0 사라짐)
+
+| 옵션 | 쓰임 |
+|---|---|
+| `encoding="cp949"` | 한글 깨짐 (Windows 엑셀 CSV) |
+| `na_values=["-", "없음"]` | 결측으로 볼 값 추가 |
+| `parse_dates=["date"]` | 날짜 열 변환 |
 
 ---
 
-# Level 3 — 테스트로 확인하기
+# 첫 탐색 5종 세트
 
-1. 정상 입력과 예상 출력을 작성합니다.
-2. 경계값 또는 오류 가능 입력을 하나 추가합니다.
-3. 실제 결과와 비교합니다.
-4. 실패하면 오류 메시지와 수정 이유를 기록합니다.
+| 함수 | 알 수 있는 것 |
+|---|---|
+| `df.head()` / `sample(3)` | 실제 값의 모양 |
+| `df.info()` | 행 수, 열 자료형, **Non-Null 개수** |
+| `df.describe()` | 숫자 열 요약 (평균 · 사분위 · 최소 · 최대) |
+| `df.isna().sum()` | 열별 결측 개수 |
+| `df["열"].value_counts()` | 범주별 개수 |
 
-> “실행됨”과 “정확함”을 따로 확인합니다.
+> `assignment` → `float64`, Non-Null **77** → 결측 3개 (결측이 있으면 정수 열도 실수가 된다)
 
 ---
 
-# Level 4 — AI와 기능 확장
+# 열과 행 선택
 
-```text
-아래 Python 코드에 [추가 기능]을 넣고 싶습니다.
-먼저 변경할 위치와 이유만 설명해 주세요.
-전체 코드를 바로 작성하지 말고,
-정상 사례와 경계 사례 테스트를 각각 제안해 주세요.
+```python
+df["final"]                          # 열 하나 → Series
+df[["name", "midterm", "final"]]     # 여러 열 → DataFrame (대괄호 두 겹)
 ```
 
-- AI 제안 중 채택·거절한 부분을 구분합니다.
-- 직접 수정한 줄과 테스트 결과를 기록합니다.
+| 표현 | 의미 |
+|---|---|
+| `df.iloc[0]` | 0번째 **위치**의 행 |
+| `df.iloc[:3, :2]` | 앞 3행, 앞 2열 |
+| `df.loc[5, "name"]` | 인덱스 **이름** 5인 행의 name |
+| `df.loc[df["year"] == 1, ["name", "final"]]` | 조건 행 + 특정 열 |
 
 ---
 
-# 실습 완료 점검
+# 조건 필터
 
-- [ ] Level 1: 예상 → 실행 → 한 곳 변경
-- [ ] Level 2: 두 곳 변경과 결과 설명
-- [ ] Level 3: 정상·경계 사례 테스트
-- [ ] Level 4: 확장 기능 또는 설계 메모
-- [ ] AI Prompt·채택·수정·검증 기록
+```python
+cond = (df["department"] == "컴퓨터공학과") & (df["final"] >= 85)
+df[cond]
+
+df[df["department"].isin(["간호학과", "경영학과"])]
+df[df["final"].between(70, 79)]          # 70 이상 79 이하
+df[df["assignment"].isna()]
+df.query("year >= 3 and attendance < 12")
+```
+
+`&` `|` `~` + **괄호** (NumPy와 같다) · `query` 문자열 안에서는 `and` 가능
 
 ---
 
-# 오늘의 산출물과 마무리
+# 정렬
 
-## 데이터 구조·품질·기초통계 탐색 보고
+```python
+df.sort_values(["final", "student_id"], ascending=[False, True])
+df.nlargest(3, "midterm")
+df["year"].value_counts().sort_index()
+```
 
-- 노트북이 위에서 아래로 실행되는가?
-- 코드 한 부분을 말로 설명할 수 있는가?
-- AI 제안을 정상·경계 사례로 검증했는가?
-- 직접 바꾼 코드와 이유가 기록되어 있는가?
+- 여러 기준: 리스트로, 방향도 리스트로
+- 동점 처리 기준을 **반드시** 정한다 (4주차 `key=(-점수, 이름)`과 같은 생각)
+
+---
+
+# 새 열 만들기
+
+```python
+df["total"] = (df["midterm"] * 0.3 + df["final"] * 0.4
+               + df["assignment"].fillna(0) * 0.3).round(1)
+
+df["grade"] = pd.cut(df["total"], bins=[-1, 60, 70, 80, 90, 101],
+                     right=False, labels=["F", "D", "C", "B", "A"])
+df.loc[df["attendance"] < 12, "grade"] = "F"
+```
+
+- 열 연산은 **모든 행에 한 번에** (벡터화)
+- `right=False` → `[60, 70)` 왼쪽 포함 → **90.0은 A**
+- 조건부 수정은 `loc[행조건, 열] = 값`
+
+---
+
+# 8주차 실기 vs pandas
+
+| 8주차 (순수 Python) | 10주차 (pandas) |
+|---|---|
+| `csv.DictReader` + 형 변환 + 검증 | `pd.read_csv` |
+| `total_score` 함수 + 반복 | 열 연산 한 줄 |
+| `distribution` 딕셔너리 | `value_counts()` |
+| `dept_summary` 그룹 묶기 | `groupby().agg()` |
+
+결과: **A 8 / B 22 / C 23 / D 12 / F 15** — 같다 ✅
+
+> 원리를 알고 나서 도구를 쓰면 **결과를 검증할 수 있다**
+
+---
+
+# 실습 1 · 2 (Level 1 → Level 2)
+
+**Level 1 따라하기**
+- Series · DataFrame 만들기, `read_csv`, 탐색 5종 세트
+- 선택 · `loc` / `iloc` · 필터 · 정렬 · 새 열
+
+**Level 2 바꾸기**
+- 정보보안학과 & 출석 15회 이상
+- 총점 내림차순 · 이름 오름차순 상위 5명
+- `improved = final - midterm` 가장 많이 오른 3명
+
+---
+
+# 실습 3 (Level 3): 탐색 보고
+
+| 질문 | 방법 |
+|---|---|
+| Q1. 몇 명 · 몇 열 · 결측은? | `shape`, `isna().sum()` |
+| Q2. 등급 분포 = 8주차 결과? | `value_counts`, `assert` |
+| Q3. 학과별 평균 · 통과율? | `groupby` 맛보기 |
+| Q4. 출석과 총점의 관계? | `corr`, 출석 구간별 평균 |
+| Q5. 과제 미제출의 영향? | 필터, 결측 처리 비교 |
+
+탐색은 **질문에서 출발**한다
+
+---
+
+# groupby 맛보기
+
+```python
+df["passed"] = df["grade"] != "F"
+df.groupby("department").agg(
+    count=("name", "size"),
+    avg_total=("total", "mean"),
+    pass_rate=("passed", "mean"),
+)
+```
+
+`(새 열 이름) = (원래 열, 집계 함수)` — 자세한 것은 11주차
+
+---
+
+# 상관은 인과가 아니다
+
+```python
+df["attendance"].corr(df["total"])     # 약 0.05
+df.groupby(pd.cut(df["attendance"], [0, 11, 13, 15, 16]), observed=True)["total"].mean()
+```
+
+- 상관계수: −1 ~ 1, 0에 가까우면 선형 관계가 약함
+- 상관이 높아도 **원인 → 결과**라고 말할 수 없다
+- AI가 "출석이 성적을 올린다"고 쓰면 → **근거를 다시 확인**
+
+---
+
+# 결측 처리가 결론을 바꾼다
+
+```python
+no_assign = df[df["assignment"].isna()]           # 3명
+# 0점 처리 vs 과제 평균으로 채우기 → 총점 약 24점 차이
+```
+
+| 처리 방법 | 의미 |
+|---|---|
+| 0점 | "미제출 = 0점" 규정이 있을 때 |
+| 평균으로 채우기 | 측정 누락일 때 (성적에는 부적절) |
+| 행 제외 | 분석에서 빼도 될 때 |
+
+> 결측 처리 방법은 **분석 목적과 규정**으로 정하고, 보고서에 밝힌다
+
+---
+
+# AI 함정 1: and
+
+```python
+df[df["final"] > 80 and df["year"] >= 3]
+# ValueError: The truth value of a Series is ambiguous ...
+
+df[(df["final"] > 80) & (df["year"] >= 3)]       # OK
+```
+
+`and`는 **값 하나**의 참/거짓만 판단 → Series 전체에는 `&`
+
+---
+
+# AI 함정 2: 체인 인덱싱
+
+"1학년에게 보너스 5점 열을 만들어 줘"
+
+```python
+df["bonus"] = 0
+df[df["year"] == 1]["bonus"] = 5      # AI 코드
+df.loc[df["year"] == 1, "bonus"].sum()   # 0 ← 안 바뀜!
+```
+
+`df[조건]`이 **복사본**을 만들고 → 복사본을 바꾼 뒤 버려짐
+
+```python
+df.loc[df["year"] == 1, "bonus"] = 5    # 조건과 열을 한 번에
+```
+
+---
+
+# AI의 pandas 코드 체크리스트
+
+| 확인 | 방법 |
+|---|---|
+| 조건에 `and` / `or` | `&`, `\|`, 괄호 |
+| `df[...][...] = 값` | `df.loc[행, 열] = 값` |
+| 결과 행 수 | `len()`, `shape`로 바로 확인 |
+| 결측 처리 | `isna().sum()`, `fillna` 여부 |
+| 원본 변경 | 함수는 `df.copy()`로 시작 |
+| `count()` vs `size()` | 결측 제외 vs 전체 행 |
+
+---
+
+# 이번 주 과제 (10점)
+
+| 문제 | 내용 | 배점 |
+|---|---|---:|
+| 1 | `overview(df)` 행·열·결측·숫자 열·범주 개수 | 2 |
+| 2 | `find_students(df)` 조건 필터 + 다중 정렬 | 2 |
+| 3 | `add_total_grade(df)` · `top_names` (원본 불변) | 3 |
+| 4 | `dept_report(df)` 학과별 탐색 표 (AI 협업) | 3 |
+
+모든 함수는 **입력 DataFrame을 바꾸지 않는다**
+
+---
+
+# 자기 점검
+
+1. `info()`에서 결측을 찾는 방법은?
+2. `loc`과 `iloc`의 차이는?
+3. 학번을 `dtype=str`로 읽는 이유는?
+4. `df[cond]["col"] = 값`이 원본을 바꾸지 못하는 이유는?
+5. 결측을 0으로 채울 때와 평균으로 채울 때 결론이 달라질 수 있는 예는?
+
+---
+
+# 정리와 다음 주
+
+| 오늘 | 핵심 |
+|---|---|
+| 구조 | Series · DataFrame · 인덱스 |
+| 탐색 | head · info · describe · isna · value_counts |
+| 선택 | `[]`, `loc`, `iloc`, `& \| ~`, `isin`, `between` |
+| 가공 | 정렬, 새 열, `pd.cut`, `loc` 수정 |
+| AI | `and` → `&`, 체인 인덱싱 → `loc`, count vs size |
+
+**다음 주 · Week 11** 데이터 정제 · 변환 · 집계 — 지저분한 설문 데이터

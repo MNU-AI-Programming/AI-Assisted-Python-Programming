@@ -4,44 +4,55 @@
 
 ## 학습 목표
 
-- Series, DataFrame, read_csv, head, info, describe, loc/iloc, 필터의 핵심 개념을 적용한다.
-- `성적 데이터 탐색` 실습을 완성한다.
-- AI가 생성·제안한 코드를 실행, 검증, 수정하고 그 근거를 기록한다.
+- `Series`와 `DataFrame`의 구조(값·인덱스·열·자료형)를 설명한다.
+- `read_csv`와 `head`·`info`·`describe`·`isna`·`value_counts`로 데이터의 구조와 품질을 탐색한다.
+- 열 선택, `loc`/`iloc`, 조건 필터, 다중 정렬, 새 열 만들기로 질문에 답한다.
+- 8주차 결과를 pandas로 재현해 대조하고, AI 코드의 `and` 오류·체인 인덱싱·count/size 혼동을 찾아낸다.
 
-## 2시간 기본 운영
+## 이번 주 실습과 산출물
+
+- **핵심 실습**: 성적 데이터 탐색 보고 (질문 5개)
+- **산출물**: 데이터 구조·품질·기초통계 탐색 결과와 8주차 결과 대조
+
+## 2시간 수업 흐름
 
 | 구간 | 시간 | 활동 |
 |---|---:|---|
-| 도입·개념 | 20분 | 선수 지식 확인, 핵심 개념, 시범 |
-| 안내 실습 | 45분 | `practice.ipynb` 핵심 예제 |
-| 독립 실습 | 35분 | 도전 실습과 개인화 |
-| 공유·점검 | 20분 | 오류 사례 공유, 퀴즈, 제출 확인 |
-
-> 3시간 수업에서는 `assignment.md`의 확장 요구사항과 동료 코드 리뷰를 50분 추가하고, 중간 휴식 10분을 둡니다.
+| 도입·개념 | 20분 | DataFrame 구조, 탐색 5종 세트, 8주차와 비교 |
+| 안내 실습 | 45분 | 읽기·탐색·선택·필터·정렬·새 열 |
+| 독립·짝 실습 | 35분 | 성적 데이터 탐색 보고 (질문 5개) |
+| 공유·점검 | 20분 | pandas 함정 2가지와 체크리스트, 과제 안내 |
 
 ## 이번 주 파일
 
-- `practice.ipynb`: 실행 가능한 Colab 실습
-- `slides.md`: 개념 순서도와 Colab 실습을 포함한 Marp용 15장 슬라이드
-- `assignment.md`: 과제와 10점 루브릭
-- `quiz.md`: 형성평가 5문항
+| 파일 | 설명 | 바로 열기 |
+|---|---|---|
+| [`slides.md`](slides.md) | Marp 강의 슬라이드 | [PDF](slides.pdf) |
+| [`practice.ipynb`](practice.ipynb) | 수업 시간 실습 노트북 | [Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/practice.ipynb) |
+| [`assignment.ipynb`](assignment.ipynb) | 과제 노트북(자동 확인 포함) | [Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week10/assignment.ipynb) |
+| [`assignment.md`](assignment.md) | 과제 안내와 채점 기준 | |
 
 ## 슬라이드–노트북 연결
 
-| 슬라이드 | Colab 실습 | 학생 활동 |
+| 슬라이드 | 노트북 구간 | 학생 활동 |
 |---|---|---|
-| 5장 | 개념 순서도 | 이번 주 코드 흐름 시각화 |
-| 6~8장 | Level 1 따라하기 | 예상 → 실행 → 값 한 곳 변경 |
-| 9~10장 | Level 2 바꾸기 | 값·조건 두 곳 변경과 결과 설명 |
-| 11~12장 | Level 3 적용하기 | 정상·경계 사례 테스트 |
-| 13~15장 | Level 4·제출 점검 | 기능 확장과 AI 활용 기록 |
+| 5~7 | 1~2. Series·DataFrame, 읽기와 첫 탐색 | 구조 확인, info로 결측 찾기 |
+| 8~12 | 3. 선택·필터·정렬·새 열 | loc/iloc, & | 필터, 다중 정렬, pd.cut |
+| 13 | 4. Level 2 바꾸기 | 조건·정렬 기준 바꾸기, 향상 점수 열 |
+| 14~17 | 5. Level 3 탐색 보고 | 질문 5개, groupby 맛보기, 상관과 결측 |
+| 18~20 | 6. Level 4 pandas 함정 | and 오류, 체인 인덱싱, 체크리스트 |
 
-## 산출물
+## 사용하는 데이터
 
-**데이터 구조·품질·기초통계 탐색 보고**
+- [`students.csv`](../../datasets/students.csv)
 
-## 교수자 준비
+## 과제 (10점)
 
-- 수업 전에 노트북을 `런타임 다시 시작 후 모두 실행`으로 점검합니다.
-- 데이터 파일을 쓰는 주차는 `datasets/` 경로를 확인합니다.
-- 학생에게 정답보다 실행 증거와 수정 이유를 요구합니다.
+| 문제 | 내용 | 배점 |
+|---|---|---:|
+| 1 | 데이터 개요 함수 | 2 |
+| 2 | 조건 필터와 정렬 | 2 |
+| 3 | 총점·등급 열 추가 | 3 |
+| 4 | 학과별 탐색 보고 (AI 협업) | 3 |
+
+자세한 내용은 [과제 안내](assignment.md)를 확인하세요.

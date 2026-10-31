@@ -1,47 +1,54 @@
-# Week 02. 입력·계산·문자열
+# Week 02. 입력 · 계산 · 문자열
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week02/practice.ipynb)
 
 ## 학습 목표
 
-- 변수, 자료형, 형 변환, 연산자, f-string, 입력값 검증의 기초의 핵심 개념을 적용한다.
-- `여행 경비 계산기` 실습을 완성한다.
-- AI가 생성·제안한 코드를 실행, 검증, 수정하고 그 근거를 기록한다.
+- 산술 연산자 `//`, `%`, `**`와 연산 우선순위로 생활 문제를 계산한다.
+- 실수 비교와 반올림의 함정을 이해하고, 돈 계산에서 올림·내림 규칙을 명시한다.
+- 문자열 인덱싱·슬라이싱과 `strip`, `split`, `replace`, `join` 등으로 입력을 가공한다.
+- 입력 → 처리 → 출력으로 나눈 프로그램을 만들고, AI 정산 코드를 불변 조건으로 검증한다.
 
-## 2시간 기본 운영
+## 이번 주 실습과 산출물
+
+- **핵심 실습**: 여행 경비 계산기와 정산 규칙 검증
+- **산출물**: 입력과 계산을 분리한 생활 문제 계산기
+
+## 2시간 수업 흐름
 
 | 구간 | 시간 | 활동 |
 |---|---:|---|
-| 도입·개념 | 20분 | 선수 지식 확인, 핵심 개념, 시범 |
-| 안내 실습 | 45분 | `practice.ipynb` 핵심 예제 |
-| 독립 실습 | 35분 | 도전 실습과 개인화 |
-| 공유·점검 | 20분 | 오류 사례 공유, 퀴즈, 제출 확인 |
-
-> 3시간 수업에서는 `assignment.md`의 확장 요구사항과 동료 코드 리뷰를 50분 추가하고, 중간 휴식 10분을 둡니다.
+| 도입·개념 | 20분 | 연산자와 우선순위, 실수의 함정, 문자열 메서드 |
+| 안내 실습 | 45분 | 단위 변환, 반올림 실험, 학번 슬라이싱, 입력 정리 |
+| 독립·짝 실습 | 35분 | 시간 변환기, 여행 경비 계산기 |
+| 공유·점검 | 20분 | AI 정산 코드 검증 결과 공유, 과제 안내 |
 
 ## 이번 주 파일
 
-- `practice.ipynb`: 실행 가능한 Colab 실습
-- `slides.md`: 개념 순서도와 Colab 실습을 포함한 Marp용 15장 슬라이드
-- `assignment.md`: 과제와 10점 루브릭
-- `quiz.md`: 형성평가 5문항
+| 파일 | 설명 | 바로 열기 |
+|---|---|---|
+| [`slides.md`](slides.md) | Marp 강의 슬라이드 | [PDF](slides.pdf) |
+| [`practice.ipynb`](practice.ipynb) | 수업 시간 실습 노트북 | [Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week02/practice.ipynb) |
+| [`assignment.ipynb`](assignment.ipynb) | 과제 노트북(자동 확인 포함) | [Colab](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week02/assignment.ipynb) |
+| [`assignment.md`](assignment.md) | 과제 안내와 채점 기준 | |
 
 ## 슬라이드–노트북 연결
 
-| 슬라이드 | Colab 실습 | 학생 활동 |
+| 슬라이드 | 노트북 구간 | 학생 활동 |
 |---|---|---|
-| 5장 | 개념 순서도 | 이번 주 코드 흐름 시각화 |
-| 6~8장 | Level 1 따라하기 | 예상 → 실행 → 값 한 곳 변경 |
-| 9~10장 | Level 2 바꾸기 | 값·조건 두 곳 변경과 결과 설명 |
-| 11~12장 | Level 3 적용하기 | 정상·경계 사례 테스트 |
-| 13~15장 | Level 4·제출 점검 | 기능 확장과 AI 활용 기록 |
+| 5~10 | 1. Level 1 산술 연산 | 우선순위 예상, divmod, 실수 비교, 올림·내림 |
+| 11~14 | 2. Level 1 문자열 다루기 | 슬라이싱, 메서드, 금액 문자열 변환 |
+| 15 | 3. Level 2 바꾸기 | 시간 변환기, 이메일 정리 |
+| 16~17 | 4. Level 3 여행 경비 계산기 | 입력 → 처리 → 출력, 검증 |
+| 18~21 | 5. Level 4 AI 정산 코드 검증 | 반올림 버그 발견, 규칙 명시, 불변 조건 |
 
-## 산출물
+## 과제 (10점)
 
-**입력과 계산을 분리한 생활 문제 계산기**
+| 문제 | 내용 | 배점 |
+|---|---|---:|
+| 1 | 초를 `HH:MM:SS`로 바꾸기 | 2 |
+| 2 | 학번 분석하기 | 2 |
+| 3 | 영수증 문자열 만들기 | 3 |
+| 4 | 정확한 정산 함수 (AI 협업) | 3 |
 
-## 교수자 준비
-
-- 수업 전에 노트북을 `런타임 다시 시작 후 모두 실행`으로 점검합니다.
-- 데이터 파일을 쓰는 주차는 `datasets/` 경로를 확인합니다.
-- 학생에게 정답보다 실행 증거와 수정 이유를 요구합니다.
+자세한 내용은 [과제 안내](assignment.md)를 확인하세요.

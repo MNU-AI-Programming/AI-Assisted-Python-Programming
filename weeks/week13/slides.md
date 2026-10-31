@@ -3,185 +3,368 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
+header: "AI활용코딩연습 · Week 13"
+footer: "국립목포대학교 컴퓨터학부 · 이영호"
 style: |
-  section { font-size: 27px; }
-  code { font-size: 0.64em; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+  section { font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; font-size: 25px; padding: 56px 64px; color: #1d2733; }
+  h1 { color: #1f4e79; font-size: 1.45em; border-bottom: 3px solid #d6e4f2; padding-bottom: 6px; }
+  h2 { color: #2e75b6; font-size: 1.1em; }
+  strong { color: #c0392b; }
+  code { font-size: 0.86em; }
+  pre { font-size: 0.74em; line-height: 1.35; }
+  table { font-size: 0.78em; }
+  blockquote { border-left: 6px solid #2e75b6; background: #eef4fb; padding: 8px 18px; color: #1d2733; font-size: 0.92em; }
+  header, footer { color: #8a99a8; font-size: 0.55em; }
+  section.lead { justify-content: center; text-align: center; }
+  section.lead h1 { font-size: 2.1em; border: none; }
+  section.lead h2 { font-size: 1.3em; color: #2e75b6; }
 ---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
 
 # Week 13
 ## matplotlib 데이터 시각화
 
-이영호 교수 | 국립목포대학교 컴퓨터학부
+AI활용코딩연습(ZBE135)
+이영호 교수 · 국립목포대학교 컴퓨터학부
 
 ---
 
-# 오늘의 목표와 산출물
+# 지난주 돌아보기
 
-- 핵심 개념: figure/axes, 막대·선·산점도, 레이블, 색상, 접근성, 차트 선택
-- 실습: **지출 패턴 시각화**
-- 산출물: **메시지가 분명한 차트 3종과 해석**
+| 발견 | 근거 |
+|---|---|
+| 아메리카노 · 라떼가 매출의 40% 이상 | 메뉴별 매출 비중 |
+| 평일 점심, 특히 12시가 가장 바쁨 | 요일 × 시간대 일평균 |
+| 기온↑ → 아이스 비율↑ (26% → 81%) | 상관 0.85 |
+| 시험 주간 주문 증가 | 평일 비교 (10일) |
 
----
-
-# Colab 실습 지도
-
-| 단계 | 슬라이드 | 노트북 | 학생 활동 |
-|---|---:|---|---|
-| 개념 그림 | 5 | 흐름 안내 | 코드가 처리되는 순서 설명 |
-| Level 1 따라하기 | 6~8 | 첫 코드 셀 | 예상 → 실행 → 한 곳 변경 |
-| Level 2 바꾸기 | 9~10 | 핵심 코드 셀 | 값·조건 두 곳 변경 |
-| Level 3 적용하기 | 11~12 | 도전 코드 셀 | 정상·경계 사례 테스트 |
-| Level 4 확장하기 | 13~15 | 확장 코드 셀 | 기능 설계·AI 기록 |
-
-[이번 주 Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week13/practice.ipynb)
+오늘: 이 발견을 **한눈에 전달되는 그래프**로
 
 ---
 
-# 핵심 개념 연결
+# 오늘의 목표
 
-- figure/axes
-- 막대·선·산점도
-- 레이블
-- 색상
-- 접근성
-- 차트 선택
-
----
-
-# 개념 순서도
-
-![분석 질문을 시각적 메시지로 바꾸기](../../assets/diagrams/week13-flow.svg)
+1. `fig, ax = plt.subplots()` **객체지향 방식**
+2. **질문에 맞는 차트** 고르기 (추세 · 비교 · 분포 · 관계 · 구성)
+3. 결론형 제목, 단위, 강조 색, 주석 → **메시지가 분명한 차트**
+4. 나쁜 차트 고치기, **2×2 대시보드** 저장
+5. AI 차트 코드를 **체크리스트 + 자동 점검**으로 검증
 
 ---
 
-# Level 1 — 먼저 예측하기
+# 수업 흐름
 
-## 가장 쉬운 코드부터 시작합니다
+| 구간 | 시간 | 활동 |
+|---|---:|---|
+| 도입 · 개념 | 20분 | Figure · Axes, 차트 선택 |
+| 안내 실습 | 45분 | 차트 6종, 메시지 있는 차트 |
+| 독립 · 짝 실습 | 35분 | 나쁜 차트 고치기, 대시보드 |
+| 공유 · 점검 | 20분 | AI 차트 점검, 과제 안내 |
 
-1. 코드를 아직 실행하지 않습니다.
-2. 각 줄의 역할과 출력 결과를 예상합니다.
-3. 예상 내용을 옆 학생에게 한 문장으로 설명합니다.
-
----
-
-# Level 1 — 따라하기
-
-```python
-import matplotlib.pyplot as plt
-
-days = [1, 2, 3, 4]
-values = [3, 5, 4, 7]
-plt.plot(days, values, marker="o")
-plt.xlabel("Day")
-plt.ylabel("Value")
-plt.show()
-```
-
-**실행 전 질문:** 어떤 값이 출력될까요?
+[이번 주 Colab 실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week13/practice.ipynb)
 
 ---
 
-# Level 1 — 한 곳만 바꾸기
-
-1. 숫자 또는 문자열 **한 곳**을 찾습니다.
-2. 값을 바꾸면 어떤 출력이 나올지 먼저 적습니다.
-3. Colab에서 실행하여 예상과 비교합니다.
-
-> 설명 문장: “___을 ___로 바꾸었기 때문에 결과가 ___로 달라졌다.”
-
----
-
-# Level 2 — 핵심 코드 읽기
-
-```python
-from pathlib import Path
-import pandas as pd
-import matplotlib.pyplot as plt
-
-def find_data(name):
-    for candidate in [Path("../../datasets") / name, Path("../datasets") / name, Path("datasets") / name]:
-        if candidate.exists():
-            return candidate
-    raise FileNotFoundError(name)
-
-df = pd.read_csv(find_data("expenses.csv"))
-summary = df.groupby("category")["amount"].sum().sort_values()
-fig, ax = plt.subplots(figsize=(7, 4))
-summary.plot(kind="barh", ax=ax, color="#2A6FBB")
-ax.set(title="Category spending", xlabel="Amount (KRW)", ylabel="Category")
-fig.tight_layout()
-plt.show()
-assert len(summary) >= 3
-```
-
-코드의 **입력 → 처리 → 출력** 부분을 각각 표시하세요.
-
----
-
-# Level 2 — 두 곳 바꾸기
-
-- 입력값·조건·데이터 중 한 곳을 변경합니다.
-- 계산·함수·집계 방식 중 한 곳을 변경합니다.
-- 변경 전후 결과를 표로 기록합니다.
-
-| 구분 | 변경 전 | 변경 후 | 달라진 이유 |
-|---|---|---|---|
-| 실행 결과 |  |  |  |
-
----
-
-# Level 3 — 문제에 적용하기
-
-```python
-top_category = summary.idxmax()
-top_amount = int(summary.max())
-print(f"가장 큰 지출 범주: {top_category} ({top_amount:,}원)")
-```
-
-노트북의 전체 코드를 실행하고 요구사항과 연결하세요.
-
----
-
-# Level 3 — 테스트로 확인하기
-
-1. 정상 입력과 예상 출력을 작성합니다.
-2. 경계값 또는 오류 가능 입력을 하나 추가합니다.
-3. 실제 결과와 비교합니다.
-4. 실패하면 오류 메시지와 수정 이유를 기록합니다.
-
-> “실행됨”과 “정확함”을 따로 확인합니다.
-
----
-
-# Level 4 — AI와 기능 확장
+# Figure와 Axes
 
 ```text
-아래 Python 코드에 [추가 기능]을 넣고 싶습니다.
-먼저 변경할 위치와 이유만 설명해 주세요.
-전체 코드를 바로 작성하지 말고,
-정상 사례와 경계 사례 테스트를 각각 제안해 주세요.
+Figure (종이 한 장)
+ └── Axes (그래프 한 칸)
+      ├── ax.set_title / set_xlabel / set_ylabel
+      ├── ax.plot / bar / barh / hist / scatter / boxplot
+      └── ax.legend
 ```
 
-- AI 제안 중 채택·거절한 부분을 구분합니다.
-- 직접 수정한 줄과 테스트 결과를 기록합니다.
+```python
+fig, ax = plt.subplots(figsize=(6, 3))
+ax.plot(x, y, marker="o", label="값")
+ax.set_title("제목"); ax.set_xlabel("x (단위)"); ax.set_ylabel("y (단위)")
+ax.legend()
+plt.show()
+```
 
 ---
 
-# 실습 완료 점검
+# 한글 폰트
 
-- [ ] Level 1: 예상 → 실행 → 한 곳 변경
-- [ ] Level 2: 두 곳 변경과 결과 설명
-- [ ] Level 3: 정상·경계 사례 테스트
-- [ ] Level 4: 확장 기능 또는 설계 메모
-- [ ] AI Prompt·채택·수정·검증 기록
+```python
+try:
+    import koreanize_matplotlib
+except ModuleNotFoundError:
+    %pip install -q koreanize-matplotlib
+    import koreanize_matplotlib
+```
+
+- Colab 기본 폰트에는 한글이 없어 □□□로 보인다
+- `koreanize-matplotlib`가 나눔고딕을 설정해 준다
 
 ---
 
-# 오늘의 산출물과 마무리
+# 질문에 맞는 차트
 
-## 메시지가 분명한 차트 3종과 해석
+| 질문 | 차트 | 메서드 |
+|---|---|---|
+| 시간에 따라? (추세) | 선 | `ax.plot` |
+| 무엇이 더 큰가? (비교) | 막대, 항목 많으면 **가로 + 정렬** | `ax.bar`, `ax.barh` |
+| 어떻게 퍼져 있나? (분포) | 히스토그램 | `ax.hist` |
+| 그룹별 분포 | 상자 그림 | `ax.boxplot` |
+| 관계가 있나? (관계) | 산점도 | `ax.scatter` |
+| 전체 중 비율 (구성) | 정렬 막대 (파이는 2~3항목만) | `ax.barh` |
 
-- 노트북이 위에서 아래로 실행되는가?
-- 코드 한 부분을 말로 설명할 수 있는가?
-- AI 제안을 정상·경계 사례로 검증했는가?
-- 직접 바꾼 코드와 이유가 기록되어 있는가?
+---
+
+# ① 추세: 선 + 이동평균
+
+```python
+daily["ma7"] = daily["revenue"].rolling(7).mean()
+fig, ax = plt.subplots(figsize=(9, 3.5))
+ax.plot(daily["date"], daily["revenue"] / 1000, color="#BBBBBB", linewidth=1, label="일 매출")
+ax.plot(daily["date"], daily["ma7"] / 1000, color="#1f4e79", linewidth=2.5, label="7일 이동평균")
+ax.set_ylabel("매출 (천 원)")
+ax.legend(loc="upper left")
+```
+
+원자료는 **연하게**, 추세는 **진하게**
+
+---
+
+# ② ③ 비교: 막대와 가로 막대
+
+```python
+by_wd = daily.groupby("weekday")["revenue"].mean().reindex(list("월화수목금토"))
+ax.bar(by_wd.index, by_wd.values / 1000)          # 순서가 의미 있으면 그 순서로
+
+menu = cafe.groupby("menu")["revenue"].sum().sort_values()
+ax.barh(menu.index, menu.values / 10000)          # 항목이 많으면 가로 + 정렬
+```
+
+- 이름이 긴 항목 → **가로 막대**
+- 순서가 없는 항목 → **크기순 정렬**
+
+---
+
+# ④ ⑤ 분포: 히스토그램과 상자 그림
+
+```python
+ax.hist(cafe["hour"], bins=range(8, 21), edgecolor="white")
+ax.boxplot([daily.loc[daily["weekday"] == d, "revenue"] for d in order],
+           tick_labels=order)          # matplotlib 3.9 이전: labels=
+```
+
+| 상자 그림 | 의미 |
+|---|---|
+| 상자 | 가운데 50% (Q1~Q3) |
+| 가운데 선 | 중앙값 |
+| 수염 · 점 | 일반 범위 · 이상값 후보 |
+
+---
+
+# ⑥ 관계: 산점도 + 추세선
+
+```python
+ax.scatter(daily["avg_temp"], daily["ice_ratio"] * 100, s=18, alpha=0.7)
+slope, intercept = np.polyfit(daily["avg_temp"], daily["ice_ratio"] * 100, 1)
+xs = np.linspace(daily["avg_temp"].min(), daily["avg_temp"].max(), 50)
+ax.plot(xs, slope * xs + intercept, linestyle="--")
+```
+
+기온 1℃ 오를 때 아이스 비율 약 **2.9%p** — 상관이지 인과는 아니다
+
+---
+
+# 메시지가 분명한 차트
+
+| 원칙 | 방법 |
+|---|---|
+| 제목 = 결론 | "메뉴별 매출" → "아메리카노가 매출의 4분의 1" |
+| 축에 단위 | "매출 (만 원)", "평균기온 (℃)" |
+| 하나만 강조 | 강조할 것만 진한 색, 나머지 회색 |
+| 숫자 직접 표시 | `ax.bar_label`, `ax.annotate` |
+| 군더더기 제거 | `ax.spines[["top", "right"]].set_visible(False)` |
+
+---
+
+# 강조 예
+
+```python
+share = menu / menu.sum() * 100
+colors = ["#BBBBBB"] * (len(share) - 1) + ["#C0392B"]
+bars = ax.barh(share.index, share.values, color=colors)
+ax.bar_label(bars, fmt="%.1f%%", padding=3)
+ax.set_title("아메리카노가 매출의 약 4분의 1을 차지한다",
+             loc="left", fontweight="bold")
+ax.spines[["top", "right"]].set_visible(False)
+```
+
+```python
+ax.axvspan(시작, 끝, color="#F4D03F", alpha=0.3)    # 기간 강조
+ax.annotate("중간고사", xy=(x, y), xytext=(5, -5), textcoords="offset points")
+```
+
+---
+
+# 나쁜 차트: 무엇이 문제인가?
+
+```python
+wd_mean = daily.groupby("weekday")["revenue"].mean()     # 가나다순
+ax.bar(wd_mean.index, wd_mean.values,
+       color=plt.cm.rainbow(np.linspace(0, 1, 6)))
+ax.set_ylim(60000, 175000)
+ax.set_title("data")
+```
+
+| 문제 | 고치기 |
+|---|---|
+| y축이 60,000부터 → 토요일이 거의 0처럼 | **막대는 0부터** |
+| 금목수월토화 순서 | `reindex(["월", …])` |
+| 무지개 색 | 한 색 + 강조 하나 |
+| 제목 "data", 레이블 없음 | 결론형 제목, 단위 |
+
+---
+
+# 실습 1 · 2 (Level 1 → Level 2)
+
+**Level 1 따라하기**
+- Figure · Axes 구조, 차트 6종
+- 결론형 제목 · 강조 · `bar_label` · 기간 강조
+
+**Level 2 바꾸기**
+- 나쁜 차트의 네 가지 문제를 모두 고치기
+- 토요일만 강조해 "토요일 매출은 평일의 절반 이하" 메시지
+
+---
+
+# 실습 3 (Level 3): 대시보드
+
+```python
+fig, axes = plt.subplots(2, 2, figsize=(12, 8))
+fig.suptitle("캠퍼스 카페 2025년 1학기 판매 요약", fontweight="bold")
+axes[0, 0].plot(...)      # 추세
+axes[0, 1].barh(...)      # 메뉴 비교
+axes[1, 0].imshow(...)    # 요일 × 시간대 히트맵
+axes[1, 1].scatter(...)   # 기온과 아이스 비율
+fig.tight_layout()
+fig.savefig("figures/cafe_dashboard.png", dpi=150, bbox_inches="tight")
+plt.show()
+```
+
+`savefig`는 `show`보다 **먼저** · 날짜 겹침은 `DateFormatter("%m/%d")`
+
+---
+
+# 히트맵: 두 기준을 색으로
+
+```python
+heat = pivot.reindex(order).div(days_per_wd, axis=0) / 1000
+im = ax.imshow(heat.values, cmap="Blues", aspect="auto")
+ax.set_xticks(range(heat.shape[1]), heat.columns)
+ax.set_yticks(range(heat.shape[0]), heat.index)
+for i in range(heat.shape[0]):
+    for j in range(heat.shape[1]):
+        ax.text(j, i, f"{heat.values[i, j]:.0f}", ha="center", va="center")
+fig.colorbar(im, ax=ax)
+```
+
+색만으로는 정확한 값을 읽기 어렵다 → **숫자를 함께**
+
+---
+
+# AI 차트 코드 점검: 자동으로
+
+```python
+def audit_chart(ax, kind="bar"):
+    problems = []
+    title = " ".join(ax.get_title(loc=l) for l in ("left", "center", "right")).strip()
+    if not title or title.lower() in {"data", "chart", "plot"}:
+        problems.append("제목이 없거나 의미 없음")
+    if not ax.get_xlabel() and not ax.get_ylabel():
+        problems.append("축 레이블 없음")
+    if kind == "bar" and ax.get_ylim()[0] > 0:
+        problems.append("막대 그래프의 y축이 0에서 시작하지 않음")
+    if len({tuple(p.get_facecolor()) for p in ax.patches}) > 3:
+        problems.append("색이 너무 많음")
+    return problems
+```
+
+AI 차트: 4가지 문제 → 고친 차트: **문제 없음**
+
+---
+
+# 그래프도 테스트할 수 있다
+
+| 확인 | 코드 |
+|---|---|
+| 제목 | `ax.get_title(loc="left")` |
+| 축 레이블 | `ax.get_xlabel()`, `ax.get_ylabel()` |
+| 막대 개수 · 길이 · 색 | `ax.patches`, `p.get_width()`, `p.get_facecolor()` |
+| 선 데이터 | `ax.lines[0].get_ydata()` |
+| 산점도 점 | `ax.collections[0].get_offsets()` |
+| 축 범위 | `ax.get_ylim()` |
+
+이번 주 과제의 자동 확인이 바로 이 방법
+
+---
+
+# AI에게 차트를 요청할 때
+
+```text
+daily(열: date, revenue(원), weekday('월'~'토'))로 요일별 일평균 매출 막대 그래프.
+- fig, ax = plt.subplots() 객체지향 방식
+- x축은 월~토 순서, y축은 천 원 단위, 0부터
+- 제목은 결론 문장, 축에 단위
+- 토요일만 빨간색, 나머지는 회색
+- 한글 폰트는 koreanize_matplotlib
+```
+
+**차트 종류 · 순서 · 단위 · 강조 · 0 시작**을 명시
+
+---
+
+# 시각화 체크리스트
+
+- [ ] 질문에 맞는 차트 종류인가?
+- [ ] 제목이 결론을 말하는가? 축에 단위가 있는가?
+- [ ] 막대는 0부터 시작하는가? 순서가 의미 있는가?
+- [ ] 색은 의미가 있을 때만 쓰였는가?
+- [ ] 그래프의 숫자가 표의 값과 일치하는가?
+- [ ] 글자가 겹치지 않는가? 한글이 보이는가?
+
+---
+
+# 이번 주 과제 (10점)
+
+| 문제 | 내용 | 배점 |
+|---|---|---:|
+| 1 | `plot_menu_share` 정렬 · 강조 · 값 표시 가로 막대 | 2 |
+| 2 | `plot_trend` 일 매출 + 이동평균, 범례 | 2 |
+| 3 | `plot_temp_ice` 산점도 + 추세선 + 기울기 | 3 |
+| 4 | `make_dashboard` 2×2 대시보드 PNG 저장 (AI 협업) | 3 |
+
+자동 확인이 **그래프 객체**(제목 · 막대 · 선 · 점)를 검사한다
+
+---
+
+# 자기 점검
+
+1. 추세 · 비교 · 분포 · 관계에 맞는 차트는?
+2. 막대 그래프의 y축을 0부터 시작해야 하는 이유는?
+3. 항목이 11개인 비교 그래프를 가로 막대로 그리는 이유는?
+4. "결론형 제목"의 예를 하나 들면?
+5. `savefig`를 `show`보다 먼저 호출하는 이유는?
+
+---
+
+# 정리와 다음 주
+
+| 오늘 | 핵심 |
+|---|---|
+| 구조 | `fig, ax = plt.subplots()` |
+| 선택 | 추세 → 선, 비교 → 막대, 분포 → 히스토그램 · 상자, 관계 → 산점도 |
+| 메시지 | 결론형 제목, 단위, 강조 하나, 값 표시 |
+| 대시보드 | `subplots(2, 2)`, `suptitle`, `savefig(dpi=150)` |
+| AI | 체크리스트 + 그래프 객체 자동 점검 |
+
+**다음 주 · Week 14** AI 디버깅 · 테스트 · 리팩토링

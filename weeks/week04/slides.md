@@ -3,177 +3,404 @@ marp: true
 theme: default
 paginate: true
 size: 16:9
+header: "AI활용코딩연습 · Week 04"
+footer: "국립목포대학교 컴퓨터학부 · 이영호"
 style: |
-  section { font-size: 27px; }
-  code { font-size: 0.64em; }
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+  section { font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; font-size: 25px; padding: 56px 64px; color: #1d2733; }
+  h1 { color: #1f4e79; font-size: 1.45em; border-bottom: 3px solid #d6e4f2; padding-bottom: 6px; }
+  h2 { color: #2e75b6; font-size: 1.1em; }
+  strong { color: #c0392b; }
+  code { font-size: 0.86em; }
+  pre { font-size: 0.74em; line-height: 1.35; }
+  table { font-size: 0.78em; }
+  blockquote { border-left: 6px solid #2e75b6; background: #eef4fb; padding: 8px 18px; color: #1d2733; font-size: 0.92em; }
+  header, footer { color: #8a99a8; font-size: 0.55em; }
+  section.lead { justify-content: center; text-align: center; }
+  section.lead h1 { font-size: 2.1em; border: none; }
+  section.lead h2 { font-size: 1.3em; color: #2e75b6; }
 ---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
 
 # Week 04
-## 리스트·튜플·집합·딕셔너리
+## 리스트 · 튜플 · 집합 · 딕셔너리
 
-이영호 교수 | 국립목포대학교 컴퓨터학부
-
----
-
-# 오늘의 목표와 산출물
-
-- 핵심 개념: 컬렉션 선택, 인덱싱, 슬라이싱, 순회, 컴프리헨션
-- 실습: **학생 성적 레코드 분석**
-- 산출물: **구조화된 학생 데이터와 요약 통계**
+AI활용코딩연습(ZBE135)
+이영호 교수 · 국립목포대학교 컴퓨터학부
 
 ---
 
-# Colab 실습 지도
-
-| 단계 | 슬라이드 | 노트북 | 학생 활동 |
-|---|---:|---|---|
-| 개념 그림 | 5 | 흐름 안내 | 코드가 처리되는 순서 설명 |
-| Level 1 따라하기 | 6~8 | 첫 코드 셀 | 예상 → 실행 → 한 곳 변경 |
-| Level 2 바꾸기 | 9~10 | 핵심 코드 셀 | 값·조건 두 곳 변경 |
-| Level 3 적용하기 | 11~12 | 도전 코드 셀 | 정상·경계 사례 테스트 |
-| Level 4 확장하기 | 13~15 | 확장 코드 셀 | 기능 설계·AI 기록 |
-
-[이번 주 Colab 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week04/practice.ipynb)
-
----
-
-# 핵심 개념 연결
-
-- 컬렉션 선택
-- 인덱싱
-- 슬라이싱
-- 순회
-- 컴프리헨션
-
----
-
-# 개념 순서도
-
-![문제에 맞는 자료구조 선택](../../assets/diagrams/week04-flow.svg)
-
----
-
-# Level 1 — 먼저 예측하기
-
-## 가장 쉬운 코드부터 시작합니다
-
-1. 코드를 아직 실행하지 않습니다.
-2. 각 줄의 역할과 출력 결과를 예상합니다.
-3. 예상 내용을 옆 학생에게 한 문장으로 설명합니다.
-
----
-
-# Level 1 — 따라하기
+# 지난주 돌아보기
 
 ```python
-scores = [80, 90, 70]
-scores.append(85)
-print("첫 점수:", scores[0])
-print("평균:", sum(scores) / len(scores))
+def grade(score):
+    if score < 0 or score > 100:   # 잘못된 입력 먼저
+        return "오류"
+    if score >= 90:                # 엄격한 조건 먼저, >= 경계 포함
+        return "A"
+    ...
 ```
 
-**실행 전 질문:** 어떤 값이 출력될까요?
+- 반복 패턴: 누적 · 개수 · 최댓값 · 모으기
+- 검증: 경계 · 바로 아래 · 범위 끝 · 잘못된 입력
 
 ---
 
-# Level 1 — 한 곳만 바꾸기
+# 오늘의 목표
 
-1. 숫자 또는 문자열 **한 곳**을 찾습니다.
-2. 값을 바꾸면 어떤 출력이 나올지 먼저 적습니다.
-3. Colab에서 실행하여 예상과 비교합니다.
-
-> 설명 문장: “___을 ___로 바꾸었기 때문에 결과가 ___로 달라졌다.”
+1. 네 가지 자료구조를 비교하고 **상황에 맞게** 고른다
+2. 컴프리헨션, `sorted(key=...)`, 언패킹을 쓴다
+3. 딕셔너리로 **개수 세기**와 **그룹 묶기**를 한다
+4. 학생 성적 레코드를 **학과별로 요약**한다
+5. AI 코드의 **반복 중 삭제 · 없는 키 · 원본 변경**을 찾아낸다
 
 ---
 
-# Level 2 — 핵심 코드 읽기
+# 수업 흐름
+
+| 구간 | 시간 | 활동 |
+|---|---:|---|
+| 도입 · 개념 | 20분 | 자료구조 비교, 복사와 참조 |
+| 안내 실습 | 45분 | 리스트 · 튜플 · 집합 · 딕셔너리 |
+| 독립 · 짝 실습 | 35분 | 학생 성적 레코드 분석 |
+| 공유 · 점검 | 20분 | AI 코드 함정 3가지 공유 |
+
+[이번 주 Colab 실습 열기](https://colab.research.google.com/github/MNU-AI-Programming/AI-Assisted-Python-Programming/blob/main/weeks/week04/practice.ipynb)
+
+---
+
+# 네 가지 자료구조
+
+| | 모양 | 순서 | 변경 | 중복 | 대표 용도 |
+|---|---|---|---|---|---|
+| `list` | `[1, 2, 2]` | O | O | O | 순서 있는 모음 |
+| `tuple` | `(1, 2)` | O | X | O | 고정 레코드, 여러 값 반환 |
+| `set` | `{1, 2}` | X | O | X | 중복 제거, 포함 여부 |
+| `dict` | `{"a": 1}` | O | O | 키 X | 이름으로 찾기, 집계 |
+
+> "무엇을 자주 하는가?"로 고른다: 순서대로 훑기 · 중복 제거 · 이름으로 찾기
+
+---
+
+# 리스트 기본
+
+```python
+scores = [72, 95, 88, 59]
+scores.append(100)        # [72, 95, 88, 59, 100]
+scores.insert(0, 67)      # [67, 72, 95, 88, 59, 100]
+scores.pop()              # 100을 꺼내며 삭제
+scores.remove(59)         # 값 59 삭제 (첫 번째 하나)
+88 in scores              # True
+scores.index(88)          # 3
+sum(scores), min(scores), max(scores)
+```
+
+---
+
+# sort() vs sorted()
+
+```python
+data = [3, 1, 2]
+new = sorted(data, reverse=True)   # [3, 2, 1], data는 그대로
+result = data.sort()               # data가 [1, 2, 3]으로 바뀜
+print(result)                      # None !
+```
+
+| | 원본 | 반환값 |
+|---|---|---|
+| `sorted(x)` | 그대로 | 새 리스트 |
+| `x.sort()` | **바뀜** | `None` |
+
+`scores = scores.sort()` → scores가 **None**이 되는 흔한 실수
+
+---
+
+# 예상해 보기: 복사일까?
+
+```python
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)        # ?
+```
+
+정답: `[1, 2, 3, 4]` — `b = a`는 **같은 리스트에 이름을 하나 더** 붙인 것
+
+```python
+c = a.copy()    # 또는 list(a), a[:]
+c.append(5)     # a는 그대로
+```
+
+---
+
+# 리스트 컴프리헨션
+
+`[식 for 변수 in 모음 if 조건]`
+
+```python
+scores = [72, 95, 88, 59, 100, 67, 81]
+
+passed = [s for s in scores if s >= 70]
+curved = [min(s + 5, 100) for s in scores]
+labels = ["합격" if s >= 70 else "재시험" for s in scores]
+```
+
+- 반복 + 조건 + 모으기를 한 줄로
+- 집합 `{...}`, 딕셔너리 `{k: v for ...}`도 같은 문법
+
+---
+
+# 튜플과 언패킹
+
+```python
+student = ("김민준", "컴퓨터공학과", 2)
+name, dept, year = student         # 언패킹
+
+x, y = y, x                        # 값 바꾸기
+
+def min_max(values):
+    return min(values), max(values)   # 튜플로 여러 값 반환
+
+low, high = min_max([72, 95, 88])
+student[2] = 3                     # TypeError: 바꿀 수 없음
+```
+
+---
+
+# 집합: 중복 제거와 집합 연산
+
+```python
+submitted = ["김민준", "이서연", "김민준", "박지호"]
+len(set(submitted))                 # 3명
+
+python_class = {"김민준", "이서연", "박지호", "최하은"}
+data_class   = {"이서연", "최하은", "정도윤", "강지우"}
+```
+
+| 연산 | 결과 |
+|---|---|
+| `python_class & data_class` | 이서연, 최하은 (둘 다) |
+| `python_class - data_class` | 김민준, 박지호 (Python만) |
+| `python_class \| data_class` | 6명 (하나라도) |
+| `python_class ^ data_class` | 4명 (한쪽만) |
+
+---
+
+# 딕셔너리 기본
+
+```python
+student = {"name": "김민준", "midterm": 78, "final": 85}
+
+student["name"]                  # '김민준'
+student["assignment"]            # KeyError!
+student.get("assignment")        # None
+student.get("assignment", 0)     # 0
+student["final"] = 88            # 수정 / 추가
+
+for key, value in student.items():
+    print(key, value)
+```
+
+---
+
+# 패턴 1: 개수 세기
+
+```python
+answers = ["예", "아니오", "예", "예", "모름", "아니오", "예"]
+
+counts = {}
+for a in answers:
+    counts[a] = counts.get(a, 0) + 1
+# {'예': 4, '아니오': 2, '모름': 1}
+
+from collections import Counter
+Counter(answers).most_common(2)    # [('예', 4), ('아니오', 2)]
+```
+
+---
+
+# 패턴 2: 그룹 묶기
+
+```python
+pairs = [("컴퓨터공학과", 78), ("경영학과", 91),
+         ("컴퓨터공학과", 85), ("간호학과", 88)]
+
+groups = {}
+for dept, score in pairs:
+    groups.setdefault(dept, []).append(score)
+# {'컴퓨터공학과': [78, 85], '경영학과': [91], '간호학과': [88]}
+
+for dept, s_list in groups.items():
+    print(dept, sum(s_list) / len(s_list))
+```
+
+---
+
+# sorted의 key
+
+```python
+records = [("김민준", 85), ("이서연", 92), ("박지호", 85), ("최하은", 78)]
+
+sorted(records, key=lambda r: r[1])                # 점수 오름차순
+sorted(records, key=lambda r: r[1], reverse=True)  # 점수 내림차순
+sorted(records, key=lambda r: (-r[1], r[0]))       # 점수↓, 같으면 이름↑
+```
+
+`(-r[1], r[0])` → 튜플은 **앞 원소부터** 비교
+→ 점수가 같으면 이름으로
+
+---
+
+# 실습 1 · 2 (Level 1 → Level 2)
+
+**Level 1 따라하기**
+- `sort` vs `sorted`, 복사와 참조, 컴프리헨션
+- 집합 연산, 개수 세기, 그룹 묶기, 정렬 key
+
+**Level 2 바꾸기**
+- 80점 이상 이름만 모으기
+- 학과 2개를 추가하고 **평균 높은 순**으로 출력
+
+---
+
+# 실습 3 (Level 3): 성적 레코드 분석
+
+**딕셔너리의 리스트** = 표 데이터의 기본 모양
 
 ```python
 students = [
-    {"name": "민수", "major": "컴퓨터", "score": 88},
-    {"name": "서연", "major": "AI", "score": 94},
-    {"name": "지훈", "major": "컴퓨터", "score": 73},
-    {"name": "유나", "major": "AI", "score": 81},
+    {"name": "김민준", "dept": "컴퓨터공학과", "midterm": 78, "final": 85, ...},
+    {"name": "이서연", "dept": "정보보안학과", "midterm": 92, "final": 88, ...},
+    ...
 ]
-
-
-high = [s["name"] for s in students if s["score"] >= 85]
-majors = {s["major"] for s in students}
-print("우수 학습자:", high)
-print("전공:", sorted(majors))
-assert high == ["민수", "서연"]
 ```
 
-코드의 **입력 → 처리 → 출력** 부분을 각각 표시하세요.
+1. 총점 = 중간 40% + 기말 60% → **새 레코드**
+2. 학과별 인원 · 평균 · 최고 득점자
+3. 상위 3명 (동점 이름순), 출석 미달자 집합
 
 ---
 
-# Level 2 — 두 곳 바꾸기
-
-- 입력값·조건·데이터 중 한 곳을 변경합니다.
-- 계산·함수·집계 방식 중 한 곳을 변경합니다.
-- 변경 전후 결과를 표로 기록합니다.
-
-| 구분 | 변경 전 | 변경 후 | 달라진 이유 |
-|---|---|---|---|
-| 실행 결과 |  |  |  |
-
----
-
-# Level 3 — 문제에 적용하기
+# 학과별 요약 코드
 
 ```python
-by_major = {}
-for student in students:
-    by_major.setdefault(student["major"], []).append(student["score"])
-averages = {major: sum(values) / len(values) for major, values in by_major.items()}
-print(averages)
+by_dept = {}
+for r in rows:
+    by_dept.setdefault(r["dept"], []).append(r)
+
+for dept, members in sorted(by_dept.items()):
+    avg = sum(m["total"] for m in members) / len(members)
+    best = max(members, key=lambda m: m["total"])
+    print(dept, len(members), round(avg, 1), best["name"])
+
+top3 = sorted(rows, key=lambda r: (-r["total"], r["name"]))[:3]
+low_attendance = {r["name"] for r in rows if r["attendance"] < 12}
 ```
 
-노트북의 전체 코드를 실행하고 요구사항과 연결하세요.
-
 ---
 
-# Level 3 — 테스트로 확인하기
+# 요약도 검증한다
 
-1. 정상 입력과 예상 출력을 작성합니다.
-2. 경계값 또는 오류 가능 입력을 하나 추가합니다.
-3. 실제 결과와 비교합니다.
-4. 실패하면 오류 메시지와 수정 이유를 기록합니다.
-
-> “실행됨”과 “정확함”을 따로 확인합니다.
-
----
-
-# Level 4 — AI와 기능 확장
-
-```text
-아래 Python 코드에 [추가 기능]을 넣고 싶습니다.
-먼저 변경할 위치와 이유만 설명해 주세요.
-전체 코드를 바로 작성하지 말고,
-정상 사례와 경계 사례 테스트를 각각 제안해 주세요.
+```python
+# 빠진 학생 없음
+assert sum(len(m) for m in by_dept.values()) == len(students)
+# 1등이 진짜 최고점
+assert top3[0]["total"] == max(r["total"] for r in rows)
+# 원본은 그대로
+assert students[0]["midterm"] == 78
 ```
 
-- AI 제안 중 채택·거절한 부분을 구분합니다.
-- 직접 수정한 줄과 테스트 결과를 기록합니다.
+> 요약 결과는 **원본과 대조**할 수 있어야 믿을 수 있다
 
 ---
 
-# 실습 완료 점검
+# AI 함정 1: 반복 중 삭제
 
-- [ ] Level 1: 예상 → 실행 → 한 곳 변경
-- [ ] Level 2: 두 곳 변경과 결과 설명
-- [ ] Level 3: 정상·경계 사례 테스트
-- [ ] Level 4: 확장 기능 또는 설계 메모
-- [ ] AI Prompt·채택·수정·검증 기록
+```python
+scores = [55, 58, 90, 45, 70]
+for s in scores:
+    if s < 60:
+        scores.remove(s)
+print(scores)          # [58, 90, 70]  ← 58이 남았다!
+```
+
+55를 지우면 58이 앞으로 당겨져 **검사를 건너뜀**
+
+```python
+kept = [s for s in scores if s >= 60]   # 남길 것만 모은 새 리스트
+```
 
 ---
 
-# 오늘의 산출물과 마무리
+# AI 함정 2 · 3
 
-## 구조화된 학생 데이터와 요약 통계
+**없는 키에 더하기**
 
-- 노트북이 위에서 아래로 실행되는가?
-- 코드 한 부분을 말로 설명할 수 있는가?
-- AI 제안을 정상·경계 사례로 검증했는가?
-- 직접 바꾼 코드와 이유가 기록되어 있는가?
+```python
+counts[a] += 1                         # KeyError
+counts[a] = counts.get(a, 0) + 1       # OK
+```
+
+**함수가 몰래 원본을 바꾸기**
+
+```python
+def add_bonus(score_list, bonus):
+    for i in range(len(score_list)):
+        score_list[i] += bonus          # 원본 수정!
+    return score_list
+
+def add_bonus_safe(score_list, bonus):
+    return [s + bonus for s in score_list]
+```
+
+---
+
+# AI 코드 체크리스트
+
+| 확인 질문 | 테스트 방법 |
+|---|---|
+| 반복 중 리스트를 지우나? | 연속된 삭제 대상 `[55, 58, ...]` |
+| 없는 키를 바로 꺼내나? | 처음 등장하는 키가 있는 입력 |
+| 원본을 바꾸나? | 실행 후 원본 `assert` |
+| 동점 처리는? | 같은 점수 두 명 |
+
+프롬프트: **"원본은 바꾸지 말고 새 리스트를 반환, 동점이면 이름 가나다순"**
+
+---
+
+# 이번 주 과제 (10점)
+
+| 문제 | 내용 | 배점 |
+|---|---|---:|
+| 1 | `word_count(text)` 단어 빈도 (소문자, 문장부호 제거) | 2 |
+| 2 | `compare_classes(a, b)` 집합으로 두 반 비교 | 2 |
+| 3 | `dept_summary(records)` 학과별 인원·평균·최고 (동점 처리) | 3 |
+| 4 | `top_n`, `drop_below` – 원본을 지켜라 (AI 협업) | 3 |
+
+문제 4: AI의 첫 코드가 **어떤 확인에서 실패했는지** 기록
+
+---
+
+# 자기 점검
+
+1. `b = a`와 `b = a.copy()`의 차이는?
+2. `scores = scores.sort()` 후 scores의 값은?
+3. 두 명단에서 "둘 다 듣는 학생"을 구하는 연산은?
+4. 학과별로 점수를 모으는 딕셔너리 패턴은?
+5. 반복 중 `remove`를 쓰면 왜 원소를 건너뛸까?
+
+---
+
+# 정리와 다음 주
+
+| 오늘 | 핵심 |
+|---|---|
+| 리스트 | `sorted` vs `sort()`, `.copy()`, 컴프리헨션 |
+| 튜플 · 집합 | 언패킹, 중복 제거, `&` `\|` `-` |
+| 딕셔너리 | `get`, 개수 세기, `setdefault` 그룹 |
+| 정렬 | `key=lambda r: (-점수, 이름)` |
+| AI 검증 | 반복 중 삭제 · 없는 키 · 원본 변경 · 동점 |
+
+**다음 주 · Week 05** 함수 · 모듈 · 테스트 가능한 코드
